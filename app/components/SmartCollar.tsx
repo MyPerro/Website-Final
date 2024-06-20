@@ -28,7 +28,7 @@ const Collar = () => {
     <div className="h-[65vh]">
       <div className="flex flex-col items-end m-5 mt-2 space-y-2">
         <h1 className="text-8xl text-[#3C130E]">Smart Collar</h1>
-        <p className="w-[37.3%]">Smart Collar is a collar that helps you track your pet's location, health, and activity. lalallalal lalalallala</p>
+        <p className="w-[37.3%]">Smart Collar is a collar that helps you track your pet&apos;s location, health, and activity. lalallalal lalalallala</p>
       </div>
       <section className="h-[65vh] w-full relative">
         <Canvas dpr={[1, 2]} camera={{ fov: 45 }} shadows={true} ref={meshRef}>
