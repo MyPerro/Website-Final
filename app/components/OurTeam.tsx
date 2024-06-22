@@ -18,7 +18,7 @@ function Ourteam() {
               </div>
               <div className="card_face card_back">
                 <p>
-                  Muffin, the chief morale officer and inspiration for MyPerro, isn't just a dog, he is a little kid with fluffy fur, a wet nose, a wagging tail, and boundless love. But that all changed to ticks and fleas on his fur, a scared face, his tail tucked between his legs, and eyes filled
+                  Muffin, the chief morale officer and inspiration for MyPerro, isn&apos;t just a dog, he is a little kid with fluffy fur, a wet nose, a wagging tail, and boundless love. But that all changed to ticks and fleas on his fur, a scared face, his tail tucked between his legs, and eyes filled
                   with a plea for help. We saw him come back in this condition from a boarding facility, he was mistreated to an extent, that we almost lost him.
                 </p>
 
@@ -54,7 +54,7 @@ function Ourteam() {
               </div>
               <div className="card_face card_back">
                 <p>
-                  A pet boarding's carelessness changed the trajectory of my life. Sometimes you don't know when to stop waiting but have to make peace with the fact. Still I always say I didn't lose waffy, I carry him in my heart wherever I go. My first pet, love, best friend and indeed endless
+                  A pet boarding&apos;s carelessness changed the trajectory of my life. Sometimes you don&apos;t know when to stop waiting but have to make peace with the fact. Still I always say I didn&apos;t lose waffy, I carry him in my heart wherever I go. My first pet, love, best friend and indeed endless
                   source of motivation.
                 </p>
                 <p>Waffy is indeed CMO - cutest mischief officer , whose memories are enough to add sunshine to my life and work.He is the reason why I started and keeps me going an extra mile always.</p>
@@ -71,7 +71,7 @@ function Ourteam() {
                 </a>
               </div>
               <div className="card_face card_back">
-                <p>I've always had a deep love for dogs, and at MyPerro, I'm thrilled to make a positive impact on their lives. Even small improvements in their well-being can bring enormous joy. For me, it's more than just a startup, it's about giving back and ensuring their happiness.</p>
+                <p>I&apos;ve always had a deep love for dogs, and at MyPerro, I&apos;m thrilled to make a positive impact on their lives. Even small improvements in their well-being can bring enormous joy. For me, it&apos;s more than just a startup, it&apos;s about giving back and ensuring their happiness.</p>
               </div>
             </div>
           </div>
