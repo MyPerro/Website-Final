@@ -32,7 +32,7 @@ interface CardData {
     ];
 
     return (
-        <div className="flex ml-10 mr-10 justify-center items-center h-screen overflow-hidden">
+        <div className="flex ml-10 mr-10 justify-center items-center h-[80vh] overflow-hidden">
           {visibleCards.map((card, index) => (
             card && (
               <Card

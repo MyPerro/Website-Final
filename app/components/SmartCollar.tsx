@@ -2,7 +2,6 @@
 import { Canvas, useFrame } from 'react-three-fiber';
 import { useGLTF, Stage, PresentationControls } from '@react-three/drei';
 import { useEffect, useRef } from 'react';
-import Image from 'next/image';
 
 const Model = (props: JSX.IntrinsicElements['group']) => {
   const scene = useGLTF('/dogCollar.glb').scene;
@@ -16,47 +15,68 @@ const Collar = () => {
   const pathRef3 = useRef<SVGPathElement>(null);
   const pathRef4 = useRef<SVGPathElement>(null);
   const pathRef5 = useRef<SVGPathElement>(null);
+  const pathRef6 = useRef<SVGPathElement>(null);
+  const sectionRef = useRef(null);
 
-  useEffect(() => {
-    [pathRef1, pathRef2, pathRef3, pathRef4, pathRef5].forEach((ref) => {
-      if (ref.current) {
-        const path = ref.current;
-        const length = path.getTotalLength();
-        path.style.transition = path.style.webkitTransition = 'none';
-        path.style.strokeDasharray = `${length} ${length}`;
-        // Start with the strokeDashoffset at negative length to make the path appear unfilled
-        path.style.strokeDashoffset = `-${length}`;
-        path.getBoundingClientRect(); // Trigger a reflow in between the style changes
-        path.style.transition = path.style.webkitTransition = 'stroke-dashoffset 2s ease-in-out';
-        // Animate the strokeDashoffset to '0' to fill the path from right to left
-        setTimeout(() => {
-          const dots = document.getElementsByClassName('dot'); // Get all elements with the class 'param'
-          for (let i = 0; i < dots.length; i++) {
-            dots[i].classList.remove('hidden-initially');
+useEffect(() => {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        [pathRef1, pathRef2, pathRef3, pathRef4, pathRef5, pathRef6].forEach((ref) => {
+          if (ref.current) {
+            const path = ref.current;
+            const length = path.getTotalLength();
+            path.style.transition = path.style.webkitTransition = 'none';
+            path.style.strokeDasharray = `${length} ${length}`;
+            if (ref === pathRef5) {
+              path.style.strokeDashoffset = `${length}`;
+            } else {
+              path.style.strokeDashoffset = `-${length}`;
+            }
+            path.getBoundingClientRect(); // Trigger a reflow
+            path.style.transition = path.style.webkitTransition = 'stroke-dashoffset 2s ease-in-out';
+            setTimeout(() => {
+              const dots = document.getElementsByClassName('dot');
+              for (let i = 0; i < dots.length; i++) {
+                dots[i].classList.remove('hidden-initially');
+              }
+              path.style.strokeDashoffset = '0';
+              setTimeout(() => {
+                requestAnimationFrame(() => {
+                  const pTags = document.getElementsByClassName('param'); // Get all elements with the class 'param'
+                  for (let i = 0; i < pTags.length; i++) {
+                    pTags[i].classList.remove('hidden-initially');
+                    pTags[i].classList.add('wipe-effect'); // Add the wipe effect class
+                  }
+                });
+                requestAnimationFrame(() => {
+                  const pTags = document.getElementsByClassName('param-right'); // Get all elements with the class 'param-right'
+                  for (let i = 0; i < pTags.length; i++) {
+                    pTags[i].classList.remove('hidden-initially');
+                    pTags[i].classList.add('wipe-effect-reverse'); // Add the wipe effect reverse class
+                  }
+                });
+              }, 2000); // Wait for the stroke animation to end
+            }, 1500); // Time of animation
           }
-          path.style.strokeDashoffset = '0'; // Start the stroke animation
-
-          // Add class to <p> tag after the stroke animation ends
-          setTimeout(() => {
-            requestAnimationFrame(() => {
-              const pTags = document.getElementsByClassName('param'); // Get all elements with the class 'param'
-              for (let i = 0; i < pTags.length; i++) {
-                pTags[i].classList.remove('hidden-initially');
-                pTags[i].classList.add('wipe-effect'); // Add the wipe effect class
-              }
-            });
-            requestAnimationFrame(() => {
-              const pTags = document.getElementsByClassName('param-right'); // Get all elements with the class 'param'
-              for (let i = 0; i < pTags.length; i++) {
-                pTags[i].classList.remove('hidden-initially');
-                pTags[i].classList.add('wipe-effect-reverse'); // Add the wipe effect class
-              }
-            });
-          }, 2000); // Wait for the stroke animation to end
-        }, 1500);
+        });
       }
     });
-  }, []);
+  }, {
+    rootMargin: '0px',
+    threshold: 0.1
+  });
+
+  if (sectionRef.current) {
+    observer.observe(sectionRef.current);
+  }
+
+  return () => {
+    if (sectionRef.current) {
+      observer.unobserve(sectionRef.current);
+    }
+  };
+}, []);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -71,7 +91,7 @@ const Collar = () => {
   }, []);
 
   return (
-    <div className="h-[65vh]">
+    <div ref={sectionRef} className="h-[70vh]">
       <div className="flex flex-col items-end m-5 mt-2 space-y-2">
         <h1 className="text-8xl text-[#3C130E]">Smart Collar</h1>
         <p className="w-[37.3%]">Smart Collar is a collar that helps you track your pet&apos;s location, health, and activity. lalallalal lalalallala</p>
@@ -98,7 +118,7 @@ const Collar = () => {
           </svg>
         </div>
         <div className="w-2 h-2 border-2 border-[#3C130E] rounded-full top-[11.65rem] left-[37.25rem] absolute hidden-initially dot"></div>
-        <p className="text-[#DE6631] text-lg absolute top-[18rem] left-[21.5rem] w-[10%] font-bold leading-tight hidden-initially param">GPS Tracker</p>
+        <p className="text-[#DE6631] text-lg absolute top-[18rem] left-[21.5rem] font-bold leading-tight hidden-initially param w-[10%]">GPS Tracker</p>
         <div className="absolute top-[18.75rem] left-[28.5rem]">
           <svg width="112" height="2" viewBox="0 0 112 2" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path ref={pathRef3} d="M0 1h112" stroke="black" strokeWidth="2" />
@@ -114,11 +134,18 @@ const Collar = () => {
         <div className="w-2 h-2 border-2 border-[#DE6631] rounded-full top-[5.85rem] right-[38.25rem] hidden-initially absolute dot"></div>
         <p className="text-[#DE6631] text-lg absolute top-[10.75rem] right-[21.5rem] w-[10%] font-bold hidden-initially leading-tight param-right">Activity Monitoring</p>
         <div className="absolute top-[12rem] right-[30rem]">
-        <svg width="155" height="2" viewBox="0 0 112 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg width="155" height="2" viewBox="0 0 112 2" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path ref={pathRef5} d="M0 1h112" stroke="#DE6631" strokeWidth="2" />
           </svg>
         </div>
         <div className="w-2 h-2 border-2 border-[#3C130E] rounded-full top-[11.85rem] right-[38.25rem] hidden-initially absolute dot"></div>
+        <p className="text-[#DE6631] text-lg absolute top-[18.75rem] right-[23.75rem] w-[10%] font-bold hidden-initially leading-tight param-right">Temprature Monitoring</p>
+        <div className="absolute top-[16.25rem] right-[34rem]">
+          <svg width="135" height="82" viewBox="0 0 246 85" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path ref={pathRef6} d="M246 83.5H65.5L1.5 1.5" stroke="black" stroke-width="3" />
+          </svg>
+        </div>
+        <div className="w-2 h-2 border-2 border-[#DE6631] rounded-full top-[17rem] right-[42.25rem] hidden-initially absolute dot"></div>
       </section>
     </div>
   );

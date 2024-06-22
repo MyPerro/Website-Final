@@ -14,7 +14,6 @@ export default function Home() {
       <SmartCollar/>
       <HoverParagraph/>
       <Ourteam/>
-      <Cardblock/>
     </>
   );
 }
