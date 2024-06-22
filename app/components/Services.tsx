@@ -11,7 +11,7 @@ const Services = () => {
       <div className="w-[60%] flex flex-row justify-center items-center pl-20">
         <div className="w-1/2 flex flex-col justify-center items-start m-10 space-y-4">
           <div className="bg-[#FEEDDD] h-[325px] p-8 flex justify-center items-center rounded-tl-[5rem] rounded-br-[5rem]">
-            <img src="/Animation1-unscreen.gif" width="250" height="250" alt="Animation" />
+            <img src="/Animation1.gif" width="250" height="250" alt="Animation" />
           </div>
           <h2 className="text-3xl text-[#3C130E]">Dog Walking</h2>
           <p>Easily connect with certified, loving dog walkers through trusted platforms, ensuring your pets well-being and your peace of mind.`</p>

@@ -14,9 +14,11 @@ const Collar = () => {
   const pathRef1 = useRef<SVGPathElement>(null);
   const pathRef2 = useRef<SVGPathElement>(null);
   const pathRef3 = useRef<SVGPathElement>(null);
+  const pathRef4 = useRef<SVGPathElement>(null);
+  const pathRef5 = useRef<SVGPathElement>(null);
 
   useEffect(() => {
-    [pathRef1, pathRef2, pathRef3].forEach((ref) => {
+    [pathRef1, pathRef2, pathRef3, pathRef4, pathRef5].forEach((ref) => {
       if (ref.current) {
         const path = ref.current;
         const length = path.getTotalLength();
@@ -41,6 +43,13 @@ const Collar = () => {
               for (let i = 0; i < pTags.length; i++) {
                 pTags[i].classList.remove('hidden-initially');
                 pTags[i].classList.add('wipe-effect'); // Add the wipe effect class
+              }
+            });
+            requestAnimationFrame(() => {
+              const pTags = document.getElementsByClassName('param-right'); // Get all elements with the class 'param'
+              for (let i = 0; i < pTags.length; i++) {
+                pTags[i].classList.remove('hidden-initially');
+                pTags[i].classList.add('wipe-effect-reverse'); // Add the wipe effect class
               }
             });
           }, 2000); // Wait for the stroke animation to end
@@ -96,6 +105,20 @@ const Collar = () => {
           </svg>
         </div>
         <div className="w-2 h-2 border-2 border-[#DE6631] rounded-full top-[18.60rem] left-[35.5rem] absolute hidden-initially dot"></div>
+        <p className="text-[#DE6631] text-lg absolute top-[1.90rem] right-[20rem] w-[10%] font-bold hidden-initially leading-tight param-right">Respiratory Rate Monitoring</p>
+        <div className="absolute top-[2rem] right-[30rem]">
+          <svg width="135" height="82" viewBox="0 0 246 85" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path ref={pathRef4} d="M246 2H65.5L1.5 84" stroke="black" stroke-width="3" />
+          </svg>
+        </div>
+        <div className="w-2 h-2 border-2 border-[#DE6631] rounded-full top-[5.85rem] right-[38.25rem] hidden-initially absolute dot"></div>
+        <p className="text-[#DE6631] text-lg absolute top-[10.75rem] right-[21.5rem] w-[10%] font-bold hidden-initially leading-tight param-right">Activity Monitoring</p>
+        <div className="absolute top-[12rem] right-[30rem]">
+        <svg width="155" height="2" viewBox="0 0 112 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path ref={pathRef5} d="M0 1h112" stroke="#DE6631" strokeWidth="2" />
+          </svg>
+        </div>
+        <div className="w-2 h-2 border-2 border-[#3C130E] rounded-full top-[11.85rem] right-[38.25rem] hidden-initially absolute dot"></div>
       </section>
     </div>
   );
