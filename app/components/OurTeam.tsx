@@ -22,7 +22,7 @@ function Ourteam() {
                   with a plea for help. We saw him come back in this condition from a boarding facility, he was mistreated to an extent, that we almost lost him.
                 </p>
 
-                <p>MyPerro was born from that experience. Here, your "perro" will be treated just like it is "MyPerro", with all the love, care, cuddles, belly rubs and attention they deserve.</p>
+                <p>MyPerro was born from that experience. Here, your &quote;perro&quoate; will be treated just like it is &quote;MyPerro&quote;, with all the love, care, cuddles, belly rubs and attention they deserve.</p>
               </div>
             </div>
           </div>
