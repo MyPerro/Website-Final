@@ -2,6 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
-body{
-  background-color: #FFFCF9;
+body {
+  background-color: #fffcf9;
+}
+
+.path {
+  stroke-dasharray: 284.51922607421875 + ' ' + 284.51922607421875;
+  stroke-dashoffset: 284.51922607421875;
+  transition: stroke-dashoffset 2s ease-in-out;
+}
+
+@keyframes rightToLeftWipe {
+  0% {
+    visibility: hidden; /* Initially hide the element */
+    clip-path: inset(0 0 0 100%); /* Start with the element fully covered on the left */
+  }
+  1% {
+    visibility: visible; /* Make the element visible at the start of the animation */
+  }
+  100% {
+    visibility: visible;
+    clip-path: inset(0 0 0 0); /* End with the element fully revealed */
+  }
+}
+
+.wipe-effect {
+  animation: rightToLeftWipe 3s forwards;
+}
+
+.hidden-initially {
+  visibility: hidden;
 }
