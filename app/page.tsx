@@ -5,6 +5,7 @@ import SmartCollar from './components/SmartCollar';
 import Ourteam from './components/OurTeam';
 import HoverParagraph from './components/Hoverpara';
 import Cardblock from './components/cardBlock';
+import Footer from './components/footer';
 
 export default function Home() {
   return (
