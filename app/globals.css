@@ -195,12 +195,6 @@ body {
   }
 }
 
-.path {
-  stroke-dasharray: 284.51922607421875 + ' ' + 284.51922607421875;
-  stroke-dashoffset: 284.51922607421875;
-  transition: stroke-dashoffset 2s ease-in-out;
-}
-
 @keyframes rightToLeftWipe {
   0% {
     visibility: hidden; /* Initially hide the element */
@@ -212,6 +206,24 @@ body {
   100% {
     visibility: visible;
     clip-path: inset(0 0 0 0); /* End with the element fully revealed */
+  }
+}
+
+@keyframes moveAndScale {
+  0% {
+    transform: translateX(0) scale(1); /* Start without movement and at normal size */
+  }
+  100% {
+    transform: translateX(-15vw) scale(1.5); /* Move to the left and scale up */
+  }
+}
+
+@keyframes moveAndScaleReverse {
+  0% {
+    transform: translateX(0) scale(1); /* Start without movement and at normal size */
+  }
+  100% {
+    transform: translateX(15vw) scale(1.5); /* Move to the left and scale up */
   }
 }
 
@@ -230,13 +242,32 @@ body {
 }
 
 .wipe-effect {
-  animation: rightToLeftWipe 3s forwards;
+  animation: rightToLeftWipe 3s forwards, 
+              moveAndScale 5s 3s forwards;
 }
 
 .wipe-effect-reverse {
-  animation: rightToLeftWipeReverse 3s forwards;
+  animation: rightToLeftWipeReverse 3s forwards,
+              moveAndScaleReverse 5s 3s forwards;
 }
 
 .hidden-initially {
   visibility: hidden;
+}
+
+.footerpage{
+  background-color: #FEEAD8;
+}
+
+::placeholder{
+  padding-left:2rem;
+}
+.footerwidth{
+  width:20vw;
+}
+.footerspace{
+  margin-right:10vw;
+}
+.appname{
+  color:#756C5E;
 }

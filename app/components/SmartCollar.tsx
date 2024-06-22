@@ -18,10 +18,14 @@ const Collar = () => {
   const pathRef6 = useRef<SVGPathElement>(null);
   const sectionRef = useRef(null);
 
+// Module-level variable to track if the animation has already played
+let hasAnimated = false;
+
 useEffect(() => {
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
-      if (entry.isIntersecting) {
+      if (entry.isIntersecting && !hasAnimated) { // Check if hasAnimated is false
+        hasAnimated = true; // Set hasAnimated to true to prevent future animations
         [pathRef1, pathRef2, pathRef3, pathRef4, pathRef5, pathRef6].forEach((ref) => {
           if (ref.current) {
             const path = ref.current;
@@ -43,21 +47,22 @@ useEffect(() => {
               path.style.strokeDashoffset = '0';
               setTimeout(() => {
                 requestAnimationFrame(() => {
-                  const pTags = document.getElementsByClassName('param'); // Get all elements with the class 'param'
+                  const pTags = document.getElementsByClassName('param');
                   for (let i = 0; i < pTags.length; i++) {
                     pTags[i].classList.remove('hidden-initially');
-                    pTags[i].classList.add('wipe-effect'); // Add the wipe effect class
+                    pTags[i].classList.add('wipe-effect');
                   }
                 });
                 requestAnimationFrame(() => {
-                  const pTags = document.getElementsByClassName('param-right'); // Get all elements with the class 'param-right'
+                  const pTags = document.getElementsByClassName('param-right');
                   for (let i = 0; i < pTags.length; i++) {
                     pTags[i].classList.remove('hidden-initially');
-                    pTags[i].classList.add('wipe-effect-reverse'); // Add the wipe effect reverse class
+                    pTags[i].classList.add('wipe-effect-reverse');
                   }
                 });
               }, 2000); // Wait for the stroke animation to end
             }, 1500); // Time of animation
+            
           }
         });
       }
@@ -142,7 +147,7 @@ useEffect(() => {
         <p className="text-[#DE6631] text-lg absolute top-[18.75rem] right-[23.75rem] w-[10%] font-bold hidden-initially leading-tight param-right">Temprature Monitoring</p>
         <div className="absolute top-[16.25rem] right-[34rem]">
           <svg width="135" height="82" viewBox="0 0 246 85" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path ref={pathRef6} d="M246 83.5H65.5L1.5 1.5" stroke="black" stroke-width="3" />
+            <path  ref={pathRef6} d="M246 83.5H65.5L1.5 1.5" stroke="black" stroke-width="3" />
           </svg>
         </div>
         <div className="w-2 h-2 border-2 border-[#DE6631] rounded-full top-[17rem] right-[42.25rem] hidden-initially absolute dot"></div>
