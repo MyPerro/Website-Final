@@ -14,13 +14,25 @@ body {
 
 #ourTeam {
   position: relative;
-  padding: 0 5rem;
+  padding: 0 2rem; /* Adjusted for better responsiveness */
+  @media (min-width: 768px) {
+    padding: 0 5rem; /* Larger padding on wider screens */
+  }
 }
 
 .team_people {
-  width: 22%;
+  width: 90%; /* More suitable for mobile */
+  margin: 0 auto; /* Center the cards on smaller screens */
   background-color: #feead8;
-  height: 61vh; /* Example responsive height */
+  height: 75vh; /* Changed to auto for better responsiveness */
+  margin-bottom: 2rem; /* Space between cards on smaller screens */
+  @media (min-width: 768px) {
+    width: 45%; /* Adjust for tablet and up */
+  }
+  @media (min-width: 1024px) {
+    width: 30%; /* Original width for larger screens */
+    margin-bottom: 0; /* Remove the space between cards on larger screens */
+  }
 }
 
 .team_people {
