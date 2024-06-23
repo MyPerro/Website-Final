@@ -62,7 +62,6 @@ useEffect(() => {
                 });
               }, 2000); // Wait for the stroke animation to end
             }, 1500); // Time of animation
-            
           }
         });
       }
@@ -83,18 +82,6 @@ useEffect(() => {
   };
 }, []);
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      console.log('meshRef.current');
-      if (meshRef.current) {
-        console.log('meshRef.current', meshRef.current.style);
-        meshRef.current.style.rotate += '0.1';
-      }
-    }, 1000);
-
-    return () => clearTimeout(timer);
-  }, []);
-
   return (
     <div ref={sectionRef} className="h-[70vh]">
       <div className="flex flex-col items-end m-5 mt-2 space-y-2">
@@ -105,52 +92,52 @@ useEffect(() => {
         <Canvas dpr={[1, 2]} camera={{ fov: 45 }} shadows={true} ref={meshRef}>
           <PresentationControls speed={2.5} global>
             <Stage environment={'apartment'} intensity={0.01}>
-              <Model scale={0.016} position={[0, -0.008, 0]} rotation={[0, Math.PI / 5, 0]} />
+              <Model scale={0.016} position={[0, -0.008, 0]} rotation={[0, Math.PI / 5, 0]}/>
             </Stage>
           </PresentationControls>
         </Canvas>
-        <p className="text-[#DE6631] text-lg absolute top-[0.85rem] left-[30rem] font-bold hidden-initially param">Geofencing</p>
-        <div className="absolute squiggle-animated top-[0.8rem] left-[37rem]">
+        <p className="text-[#DE6631] text-2xl absolute top-[0.85rem] left-[20.5rem] font-bold hidden-initially param">Geofencing</p>
+        <div className="absolute squiggle-animated top-[0.8rem] left-[30rem]">
           <svg width="135" height="82" viewBox="0 0 246 85" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path ref={pathRef1} className="path" d="M0 1.5H180.5L244.5 83.5" stroke="black" stroke-width="3" />
           </svg>
         </div>
-        <div className="w-2 h-2 border-2 border-[#DE6631] rounded-full top-[4.65rem] left-[45.25rem] absolute hidden-initially dot"></div>
-        <p className="text-[#3C130E] text-lg absolute top-[7.5rem] left-[22.5rem] w-[10%] font-bold leading-tight param hidden-initially">Heart Rate Monitoring</p>
-        <div className="absolute squiggle-animated top-[7.75rem] left-[29rem]">
+        <div className="w-2 h-2 border-2 border-[#DE6631] rounded-full top-[4.65rem] left-[38.25rem] absolute hidden-initially dot"></div>
+        <p className="text-[#3C130E] text-2xl absolute top-[7.25rem] left-[13rem] w-[10%] font-bold leading-tight param hidden-initially">Heart Rate Monitoring</p>
+        <div className="absolute squiggle-animated top-[7.75rem] left-[22rem]">
           <svg width="135" height="82" viewBox="0 0 246 85" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path ref={pathRef2} d="M0 2H180.5L244.5 84" stroke="#DE6631" stroke-width="3" />
           </svg>
         </div>
-        <div className="w-2 h-2 border-2 border-[#3C130E] rounded-full top-[11.65rem] left-[37.25rem] absolute hidden-initially dot"></div>
-        <p className="text-[#DE6631] text-lg absolute top-[18rem] left-[21.5rem] font-bold leading-tight hidden-initially param w-[10%]">GPS Tracker</p>
-        <div className="absolute top-[18.75rem] left-[28.5rem]">
+        <div className="w-2 h-2 border-2 border-[#3C130E] rounded-full top-[11.65rem] left-[30.25rem] absolute hidden-initially dot"></div>
+        <p className="text-[#DE6631] text-2xl absolute top-[18rem] left-[11.5rem] font-bold leading-tight hidden-initially param w-[10%]">GPS Tracker</p>
+        <div className="absolute top-[18.75rem] left-[21.5rem]">
           <svg width="112" height="2" viewBox="0 0 112 2" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path ref={pathRef3} d="M0 1h112" stroke="black" strokeWidth="2" />
           </svg>
         </div>
-        <div className="w-2 h-2 border-2 border-[#DE6631] rounded-full top-[18.60rem] left-[35.5rem] absolute hidden-initially dot"></div>
-        <p className="text-[#DE6631] text-lg absolute top-[1.90rem] right-[20rem] w-[10%] font-bold hidden-initially leading-tight param-right">Respiratory Rate Monitoring</p>
-        <div className="absolute top-[2rem] right-[30rem]">
+        <div className="w-2 h-2 border-2 border-[#DE6631] rounded-full top-[18.60rem] left-[28.5rem] absolute hidden-initially dot"></div>
+        <p className="text-[#DE6631] text-2xl absolute top-[1.50rem] right-[8.25rem] w-[15%] font-bold hidden-initially leading-tight param-right">Respiratory Rate Monitoring</p>
+        <div className="absolute top-[2rem] right-[23rem]">
           <svg width="135" height="82" viewBox="0 0 246 85" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path ref={pathRef4} d="M246 2H65.5L1.5 84" stroke="black" stroke-width="3" />
           </svg>
         </div>
-        <div className="w-2 h-2 border-2 border-[#DE6631] rounded-full top-[5.85rem] right-[38.25rem] hidden-initially absolute dot"></div>
-        <p className="text-[#DE6631] text-lg absolute top-[10.75rem] right-[21.5rem] w-[10%] font-bold hidden-initially leading-tight param-right">Activity Monitoring</p>
-        <div className="absolute top-[12rem] right-[30rem]">
+        <div className="w-2 h-2 border-2 border-[#DE6631] rounded-full top-[5.85rem] right-[31.25rem] hidden-initially absolute dot"></div>
+        <p className="text-[#DE6631] text-2xl absolute top-[10.75rem] right-[14.5rem] w-[10%] font-bold hidden-initially leading-tight param-right">Activity Monitoring</p>
+        <div className="absolute top-[12rem] right-[23rem]">
           <svg width="155" height="2" viewBox="0 0 112 2" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path ref={pathRef5} d="M0 1h112" stroke="#DE6631" strokeWidth="2" />
           </svg>
         </div>
-        <div className="w-2 h-2 border-2 border-[#3C130E] rounded-full top-[11.85rem] right-[38.25rem] hidden-initially absolute dot"></div>
-        <p className="text-[#DE6631] text-lg absolute top-[18.75rem] right-[23.75rem] w-[10%] font-bold hidden-initially leading-tight param-right">Temprature Monitoring</p>
-        <div className="absolute top-[16.25rem] right-[34rem]">
+        <div className="w-2 h-2 border-2 border-[#3C130E] rounded-full top-[11.85rem] right-[31.25rem] hidden-initially absolute dot"></div>
+        <p className="text-[#DE6631] text-2xl absolute top-[18.75rem] right-[16.75rem] w-[10%] font-bold hidden-initially leading-tight param-right">Temperature Monitoring</p>
+        <div className="absolute top-[16.25rem] right-[27rem]">
           <svg width="135" height="82" viewBox="0 0 246 85" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path  ref={pathRef6} d="M246 83.5H65.5L1.5 1.5" stroke="black" stroke-width="3" />
           </svg>
         </div>
-        <div className="w-2 h-2 border-2 border-[#DE6631] rounded-full top-[17rem] right-[42.25rem] hidden-initially absolute dot"></div>
+        <div className="w-2 h-2 border-2 border-[#DE6631] rounded-full top-[17rem] right-[35.25rem] hidden-initially absolute dot"></div>
       </section>
     </div>
   );

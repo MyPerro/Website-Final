@@ -1,64 +1,44 @@
 'use client';
-import React from 'react';
+import Image from 'next/image';
 
-function Footer() {
+const Footer = () => {
   return (
-    <div className="flex flex-col footerpage">
-      <form method="#">
-        <div className="flex flex-row px-20 pt-10">
-          <div className="text-4xl font-bold footerspace">
-            <h1>Say Hello</h1>
-          </div>
-          <div className="ml-4 flex flex-col footerspace">
-            <div>
-              <input className="rounded-md footerwidth" type="email" placeholder="Your E-mail ID" />
-            </div>
-            <div>
-              <input className="mt-5 rounded-md footerwidth" type="text" placeholder="Your Mobile No." />
-            </div>
-          </div>
-          <div>
-            <textarea className="rounded-md footerwidth footerspace" placeholder="Message For Us" rows={3} />
-          </div>
-          <div>
-            <input className="btn w-20 bg-orange-600 text-white rounded-md mt-11" type="Submit" placeholder="Share" />
-          </div>
+    <div className="flex flex-col md:flex-row justify-between items-center footerpage px-10 py-5">
+      {/* Left Section - Logo */}
+      <div className="mb-4 md:mb-0 flex flex-row justify-center items-center">
+        <div className='mb-4 md:mb-0 flex flex-col justify-center items-start mr-20'>
+        <Image src="/footerlogo.png" alt="Logo" height="250" width="250" />
+        <p className="text-lg ml-4">1234 Street Address, City</p>
+        <p className='text-lg ml-4'>email@email.com</p>
+        <p className='text-lg ml-4'>Ph: +91 1234567890</p>
         </div>
-      </form>
-      <div className="p-10">
-        <hr className="mb-5 border-t-2 border-black" />
-        <div className="px-20 flex flex-row justify-between">
-          <div>
-            <h2>Support</h2>
-          </div>
-          <div>
-            <h2 className="appname">Contact Us</h2>
-          </div>
+        <div className="w-px bg-orange-500 h-24"></div>
+      </div>
+
+      
+
+      {/* Center Section - Social Logos, Contact Info, and Address */}
+      <div className="flex flex-col items-center mb-4 md:mb-0">
+        <div className="flex space-x-4 mb-2">
+          {/* Example social media icons */}
+          <Image src="/social/facebook.png" alt="Facebook" height="30" width="30" />
+          <Image src="/social/twitter.png" alt="Twitter" height="30" width="30" />
+          <Image src="/social/instagram.png" alt="Instagram" height="30" width="30" />
         </div>
-        <hr className="mt-5 mb-5 border-t-2 border-black" />
-        <div className="mt-5 px-20 flex flex-row justify-between">
-          <div>
-            <h2>Connect</h2>
-          </div>
-          <div className="flex flex-row">
-            <span className="mr-4 appname">Linkedin</span>
-            <span className="mr-4 appname">Instagram</span>
-            <span className="appname">X</span>
-          </div>
-        </div>
-        <hr className="mt-5 mb-5 border-t-2 border-black" />
-        <div className="mt-5 px-10 flex flex-row justify-between">
-          <div>
-            <img src="footerlogo.png" alt="hi" height="200" width="400" />
-          </div>
-          <div className="flex flex-col mt-11">
-            <span className="mr-4">email@email.com</span>
-            <span className="mr-4">Ph:- +91 12345675432 / 2435325</span>
-          </div>
-        </div>
+        <div className="text-lg"></div>
+      </div>
+
+      {/* Right Section - Form */}
+      <div className="flex flex-col w-full md:w-auto">
+        <form method="#" className="flex flex-col space-y-2">
+          <input className="rounded-md" type="email" placeholder="Your E-mail ID" />
+          <input className="rounded-md" type="text" placeholder="Your Mobile No." />
+          <textarea className="rounded-md" placeholder="Message For Us" rows={3} />
+          <input className="btn bg-orange-600 text-white rounded-md" type="submit" value="Send" />
+        </form>
       </div>
     </div>
   );
-}
+};
 
 export default Footer;
