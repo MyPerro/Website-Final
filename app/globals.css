@@ -24,14 +24,15 @@ body {
   width: 90%; /* More suitable for mobile */
   margin: 0 auto; /* Center the cards on smaller screens */
   background-color: #feead8;
-  height: 75vh; /* Changed to auto for better responsiveness */
+  height: 80vh; /* Changed to auto for better responsiveness */
   margin-bottom: 2rem; /* Space between cards on smaller screens */
   @media (min-width: 768px) {
     width: 45%; /* Adjust for tablet and up */
   }
   @media (min-width: 1024px) {
     width: 30%; /* Original width for larger screens */
-    margin-bottom: 0; /* Remove the space between cards on larger screens */
+    margin-bottom: 0;
+    height: 75vh;
   }
 }
 

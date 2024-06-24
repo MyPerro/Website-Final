@@ -11,10 +11,10 @@ function Ourteam() {
             <div className="card">
               <div className="card_face card_front">
                 <img src="avai.png" alt="hi" className="rounded-tl-[3rem]" />
-                <div className="text-black ml-2 md:text-2xl font-anta mt-3 h-7">Saiprasad Pandilwar</div>
-                <div className="text-black ml-2 md:text-xl font-anta mt-3 h-28 italic">Founder</div>
+                <div className="text-black ml-2 text-2xl font-anta mt-3 h-7">Saiprasad Pandilwar</div>
+                <div className="text-black ml-2 text-xl font-anta mt-3 h-28 md:h-24 italic">Founder</div>
                 <a href="https://www.google.com/">
-                  <img className="ml-2 " src="linkedin.png" alt="hi" height="20" width="20" />
+                  <img className="ml-2 " src="linkedin.png" alt="hi" height="30" width="30" />
                 </a>
               </div>
               <div className="card_face card_back">
@@ -31,10 +31,10 @@ function Ourteam() {
             <div className="card">
               <div className="card_face card_front">
                 <img src="manan.png" alt="hi" className="rounded-tl-[3rem]" />
-                <div className="text-black ml-2 md:text-2xl font-anta mt-3 h-7">Manan Vyas</div>
-                <div className="text-black ml-2 md:text-xl font-anta mt-3 h-28 italic">Co-Founder</div>
+                <div className="text-black ml-2 text-2xl font-anta mt-3 h-7">Manan Vyas</div>
+                <div className="text-black ml-2 text-xl font-anta mt-3 h-28 md:h-24 italic">Co-Founder</div>
                 <a href="https://www.google.com/">
-                  <img className="ml-2 " src="linkedin.png" alt="hi" height="20" width="20" />
+                  <img className="ml-2 " src="linkedin.png" alt="hi" height="30" width="30" />
                 </a>
               </div>
               <div className="card_face card_back">
@@ -49,10 +49,10 @@ function Ourteam() {
             <div className="card">
               <div className="card_face card_front">
                 <img src="Shivanshi.png" alt="hi" className="rounded-tl-[3rem]" />
-                <div className="text-black ml-2 md:text-2xl font-anta mt-3 h-7">Shivanshi Rawat</div>
-                <div className="text-black ml-2 md:text-xl font-anta mt-3 h-28 italic">Co-Founder</div>
+                <div className="text-black ml-2 text-2xl font-anta mt-3 h-7">Shivanshi Rawat</div>
+                <div className="text-black ml-2 text-xl font-anta mt-3 h-28 md:h-24 italic">Co-Founder</div>
                 <a href="https://www.google.com/">
-                  <img className="ml-2 " src="linkedin.png" alt="hi" height="20" width="20" />
+                  <img className="ml-2 " src="linkedin.png" alt="hi" height="30" width="30" />
                 </a>
               </div>
               <div className="card_face card_back">
@@ -68,10 +68,10 @@ function Ourteam() {
             <div className="card">
               <div className="card_face card_front">
                 <img src="komo.png" alt="hi" className="rounded-tl-[3rem]" />
-                <div className="text-black ml-2 md:text-2xl font-anta mt-3 h-7">Komolika Chakroborthy</div>
-                <div className="text-black ml-2 md:text-xl font-anta mt-3 h-28 italic">Co-Founder</div>
+                <div className="text-black ml-2 text-2xl font-anta mt-3 h-7">Komolika Chakroborthy</div>
+                <div className="text-black ml-2 text-xl font-anta mt-3 h-28 md:h-24 italic">Co-Founder</div>
                 <a href="https://www.google.com/">
-                  <img className="ml-2 " src="linkedin.png" alt="hi" height="20" width="20" />
+                  <img className="ml-2 " src="linkedin.png" alt="hi" height="30" width="30" />
                 </a>
               </div>
               <div className="card_face card_back">
