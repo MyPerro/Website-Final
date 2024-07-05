@@ -365,3 +365,8 @@ body {
     transform: scale(0.80);
     z-index: 1;
 }
+
+.navbar-transition {
+  transition: top 0.5s ease-in-out;
+}
+

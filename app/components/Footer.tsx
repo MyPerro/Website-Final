@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 const Footer = () => {
   return (
-    <div className="bg-custom h-[55vh] flex flex-row">
+    <div className="bg-custom h-[60vh] flex flex-row">
       <div className="flex flex-col justify-start items-start w-[25%]">
         <Image className="pt-4 mx-12" src="/footerlogo.png" alt="logo" width={250} height={250} />
         <div className="flex flex-row justify-center items-center space-x-4 mx-16 mt-4">
@@ -14,14 +14,23 @@ const Footer = () => {
           <Image src="/socials/twitter.svg" alt="twitter" width={25} height={25} />
         </div>
       </div>
-      <div className="flex flex-col space-y-1 w-[10%] mt-10 mx-12 font-nohemi text-lg">
+      <div className="flex flex-col space-y-1 w-[8%] mt-10 mx-8 font-nohemi text-lg">
+        <h1 className='text-xl font-bold'>Company</h1>
         <Link href="/contactus">Contact Us</Link>
         <Link href="/contactus">About Us</Link>
+        <Link href="/contactus">Terms and Conditions</Link>
+        <Link href="/contactus">Contact Us</Link>
+      </div>
+      <div className="flex flex-col space-y-1 w-[10%] mt-10 mx-8 font-nohemi text-lg">
+        <h1 className='text-xl font-bold'>Quick Links</h1>
         <Link href="/contactus">Smart Collar</Link>
+        <Link href="/contactus">Become Pet Sitter</Link>
+        <Link href="/contactus">Become Dog Walker</Link>
         <Link href="/contactus">Blog</Link>
+        <Link href="/contactus">Community</Link>
       </div>
       <div className="w-[65%] p-8 flex flex-row">
-        <div className="w-[26%]">
+        <div className="w-[30%]">
           <h1 className="text-5xl font-nohemi text-black">Say Hello</h1>
         </div>
         <div className="flex flex-col w-[35%] space-y-2 mx-4">

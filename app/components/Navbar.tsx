@@ -1,9 +1,44 @@
+'use client';
+import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
 const Navbar = () => {
+  const [prevScrollpos, setPrevScrollpos] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollPos = window.pageYOffset;
+      const ourServicesSection = document.getElementById('our-services');
+      const navbar = document.getElementById('navbar');
+
+      if (ourServicesSection && navbar) {
+        const sectionBottom = ourServicesSection.offsetTop + ourServicesSection.offsetHeight;
+
+        if (currentScrollPos > sectionBottom) {
+          // Apply logic only if scrolled past "Our Services" section
+          if (prevScrollpos > currentScrollPos) {
+            navbar.style.top = '0';
+          } else {
+            navbar.style.top = '-100px';
+          }
+        }
+      }
+
+      setPrevScrollpos(currentScrollPos);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    // Clean up the event listener when the component unmounts
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [prevScrollpos]);
+
   return (
-    <nav className="fixed top-0 left-0 right-0 bg-[#FAE9DA] p-2 flex items-center justify-between z-20 font-poppins shadow-lg">
+    <nav
+      id="navbar"
+      style={{ transition: 'top 0.5s ease-in-out' }} // Add this line
+      className="fixed top-0 left-0 right-0 bg-[#FAE9DA] p-2 flex items-center justify-between z-20 font-poppins shadow-lg">
       <div>
         <Image src="/Logo.png" alt="Logo" width={180} height={180} className="ml-[4rem]" />
       </div>
