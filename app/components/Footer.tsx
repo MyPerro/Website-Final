@@ -4,68 +4,34 @@ import Link from 'next/link';
 
 const Footer = () => {
   return (
-    <div className="flex flex-col md:flex-row justify-between items-center footerpage px-10 py-5">
-      {/* Left Section - Logo */}
-      <div className="mb-4 md:mb-0 flex flex-row justify-center items-center">
-        <div className="mb-4 md:mb-0 flex flex-col justify-center items-start md:mr-10">
-          <Image src="/footerlogo.png" alt="Logo" height="250" width="250" />
-          <p className="text-lg ml-4">email@email.com</p>
-          <p className="text-lg ml-4">Ph: +91 1234567890</p>
+    <div className="bg-custom h-[55vh] flex flex-row">
+      <div className="flex flex-col justify-start items-start w-[25%]">
+        <Image className="pt-4 mx-12" src="/footerlogo.png" alt="logo" width={250} height={250} />
+        <div className="flex flex-row justify-center items-center space-x-4 mx-16 mt-4">
+          <Image src="/socials/linkedin.svg" alt="linkedin" width={25} height={25} />
+          <Image src="/socials/facebook.svg" alt="facebook" width={25} height={25} />
+          <Image src="/socials/instagram.svg" alt="instagram" width={25} height={25} />
+          <Image src="/socials/twitter.svg" alt="twitter" width={25} height={25} />
         </div>
-        <div className="md:block hidden w-[2px] bg-orange-500 h-32"></div>
       </div>
-
-      {/* Center Section - Social Logos, Contact Info, and Address */}
-      <div className="flex flex-row items-center space-x-12 mb-4 md:mb-0">
-        <div className="flex flex-row justify-center items-center space-x-8 mb-2 md:mr-10">
-          {/* Example social media icons */}
-          <Image src="/socials/facebook.svg" alt="Facebook" height="30" width="30" />
-          <Image src="/socials/twitter.svg" alt="Twitter" height="30" width="30" />
-          <Image src="/socials/instagram.svg" alt="Instagram" height="30" width="30" />
-          <Image src="/socials/linkedin.svg" alt="Instagram" height="30" width="30" />
-        </div>
-        <div className="md:block hidden w-[2px] bg-orange-500 h-32"></div>
+      <div className="flex flex-col space-y-1 w-[10%] mt-10 mx-12 font-nohemi text-lg">
+        <Link href="/contactus">Contact Us</Link>
+        <Link href="/contactus">About Us</Link>
+        <Link href="/contactus">Smart Collar</Link>
+        <Link href="/contactus">Blog</Link>
       </div>
-      <div className="md:flex hidden flex-row justify-start items-center">
-        <div className='flex flex-col items-start font-semibold md:mr-20 space-y-2'>   
-        <Link href="#" className="text-zinc-800">
-          HOME
-        </Link>
-        <Link href="#" className="text-zinc-800">
-          ABOUT US
-        </Link>
-        <Link href="#" className="text-zinc-800">
-          CONTACT US
-        </Link>
-        <Link href="#" className="text-zinc-800">
-          LOGIN
-        </Link>
+      <div className="w-[65%] p-8 flex flex-row">
+        <div className="w-[26%]">
+          <h1 className="text-5xl font-nohemi text-black">Say Hello</h1>
         </div>
-        <div className='flex flex-col items-start font-semibold md:mr-10 space-y-2'>   
-        <Link href="#" className="text-zinc-800">
-          HOME
-        </Link>
-        <Link href="#" className="text-zinc-800">
-          ABOUT US
-        </Link>
-        <Link href="#" className="text-zinc-800">
-          CONTACT US
-        </Link>
-        <Link href="#" className="text-zinc-800">
-          LOGIN
-        </Link>
+        <div className="flex flex-col w-[35%] space-y-2 mx-4">
+          <input type="text" placeholder="Your E-Mail ID" className="p-2 rounded-xl shadow-3d" />
+          <input type="text" placeholder="Your Mobile Number" className="p-2 shadow-sm rounded-xl shadow-3d" />
         </div>
-        <div className="md:block hidden w-[2px] bg-orange-500 h-32"></div>
-      </div>
-
-      {/* Right Section - Form */}
-      <div className="flex flex-col w-full md:w-auto">
-        <form method="#" className="flex flex-col space-y-2">
-          <input className="rounded-md" type="email" placeholder="Your E-mail ID" />
-          <input className="rounded-md" type="text" placeholder="Your Mobile No." />
-          <textarea className="rounded-md" placeholder="Message For Us" rows={2} />
-          <input className="btn bg-orange-600 text-white rounded-md" type="submit" value="Send" />
-        </form>
+        <div className='w-[35%] flex flex-col items-end space-y-4'>
+          <textarea rows={3} placeholder="Your Message" className="p-2 rounded-xl shadow-3d w-full" />
+          <button className='py-1 px-4 bg-[#F97247] rounded-full text-white text-xl font-nohemi'>Share</button>
+        </div>
       </div>
     </div>
   );

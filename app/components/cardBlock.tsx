@@ -14,6 +14,7 @@ const cardData = [
 ];
 
 const CardCarousel = () => {
+  const [activeSlide, setActiveSlide] = React.useState(0);
 const settings = {
   dots: false,
   infinite: true,
@@ -24,6 +25,8 @@ const settings = {
   autoplaySpeed: 5000,
   pauseOnHover: true,
   arrows: false,
+  centerMode: true,
+  beforeChange: (current: number, next: number) => setActiveSlide(next),
   responsive: [
     {
       breakpoint: 768, // Width less than 768px
@@ -38,17 +41,17 @@ const settings = {
   return (
 <Slider className="p-[3rem]" {...settings}>
   {cardData.map((card, index) => (
-    <div key={index} className="shadow-md rounded-lg overflow-hidden bg-[#FEEAD8] blog-card">
-      <div style={{ display: 'flex', width: '100%' }}>
-        <img src="./blockDog.png" alt={card.title} className="w-1/2" />
-        <div className="p-5 text-center flex flex-col justify-between w-1/2">
-          <h2 className="text-2xl font-bold text-gray-800">{card.title}</h2>
-          <p className="text-gray-600">{card.description}</p>
-          <button className="bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-700 transition duration-300 ease-in-out">Read More</button>
-        </div>
+  <div key={index} className={`shadow-md rounded-lg overflow-hidden bg-[#FEEAD8] blog-card ${index === activeSlide ? 'card-focused' : 'card-blurred'}`}>
+    <div style={{ display: 'flex', width: '100%' }}>
+      <img src="./blockDog.png" alt={card.title} className="w-1/2" />
+      <div className="p-5 text-center flex flex-col justify-between w-1/2">
+        <h2 className="text-2xl font-bold text-gray-800">{card.title}</h2>
+        <p className="text-gray-600">{card.description}</p>
+        <button className="bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-700 transition duration-300 ease-in-out">Read More</button>
       </div>
     </div>
-  ))}
+  </div>
+))}
 </Slider>
   );
 };

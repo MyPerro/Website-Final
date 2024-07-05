@@ -2,8 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Nohemi';
+  src: url('/fonts/Nohemi-Regular-BF6438cc579d934.woff') format('woff');
+  font-weight: normal; /* or 400 */
+  font-style: normal; /* or italic */
+}
+
+@font-face {
+  font-family: 'Neue Regrade';
+  src: url('/fonts/Neue Regrade Regular.otf') format('opentype');
+  font-weight: normal; /* or 400 */
+  font-style: normal; /* or italic */
+}
+
 body {
   background-color: #fffcf9;
+  font-family: 'Nohemi', sans-serif;
 }
 
 .ourTeam_page {
@@ -30,9 +45,9 @@ body {
     width: 45%; /* Adjust for tablet and up */
   }
   @media (min-width: 1024px) {
-    width: 30%; /* Original width for larger screens */
+    width: 50%; /* Original width for larger screens */
     margin-bottom: 0;
-    height: 75vh;
+    height: 65vh;
   }
 }
 
@@ -44,12 +59,12 @@ body {
   position: relative;
   width: 100%; /* Adjust based on your layout */
   height: 100%; /* Adjust based on your layout */
-  transform-style: preserve-3d;
-  transition: transform 0.6s; /* Smooth flip animation */
+  overflow: hidden; /* Ensure the sliding content is clipped */
+  transition: transform 0.6s; /* Smooth slide animation */
 }
 
-.card:hover {
-  transform: rotateY(180deg);
+.card:hover .card_back {
+  transform: translateY(0%); /* Slide up to cover the card */
 }
 
 .card_face {
@@ -62,12 +77,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 3rem;
+  transition: transform 0.6s; /* Smooth slide animation */
 }
 
 .card_front,
 .card_back {
-  /* Ensure full coverage of the card's dimensions */
   width: 100%;
   height: 100%;
 }
@@ -80,11 +94,19 @@ body {
 }
 
 .card_back {
-  transform: rotateY(180deg);
+  transform: translateY(100%); /* Start off below the card */
   display: flex;
   flex-direction: column;
+  justify-content: space-between; /* Adjusts content to top and image to bottom */
   padding: 2rem;
-  /* Style your back face here */
+  z-index: 1; /* Slide above the front on hover */
+  background-color: #3c130e;
+  color: white;
+  border-radius: 3rem 0 3rem 0; /* Adjust as needed for top-left and bottom-right */
+}
+
+.image-container {
+  align-self: flex-start; /* Aligns the image container to the bottom left */
 }
 
 .hoverpage {
@@ -313,4 +335,33 @@ body {
   .slick-slide > div, .blog-card {
     width: 98% !important; /* Adjust width to 100% for smaller screens */
   }
+}
+
+.bg-custom {
+  background-color: #FEEAD8; /* Existing background color */
+  background-image: url('/footer.png'); /* Path to your background image */
+  background-size: contain; /* Ensures the image fits within the container without stretching */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-position: center bottom; /* Position the background image at the bottom center */
+  box-shadow: 0px -6px 6px -1px rgba(0, 0, 0, 0.2);
+}
+
+.shadow-3d {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Adjust values as needed */
+}
+
+.card-focused, .card-blurred {
+  transition: transform 0.5s ease, filter 0.5s ease, box-shadow 0.5s ease;
+}
+
+.card-focused {
+    transform: scale(1.1);
+    z-index: 2;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.card-blurred {
+    filter: blur(2px);
+    transform: scale(0.80);
+    z-index: 1;
 }
