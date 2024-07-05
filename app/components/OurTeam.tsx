@@ -11,7 +11,7 @@ function Ourteam() {
             <div className="card">
               <div className="card_face card_front">
                 <img src="avai.png" alt="hi" className="rounded-tl-[3rem]" />
-                <div className="text-black ml-2 text-2xl font-nohemi font-semibold mt-3 h-16">Saiprasad Pandilwar</div>
+                <div className="text-black ml-2 text-xl font-nohemi font-semibold mt-3 h-16">Saiprasad Pandilwar</div>
                 <a href="https://www.google.com/">
                   <img className="ml-2 " src="linkedin.png" alt="hi" height="20" width="20" />
                 </a>
