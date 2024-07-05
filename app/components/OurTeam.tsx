@@ -20,10 +20,10 @@ function Ourteam() {
                 <div className="content">
                   <div className="text-white text-2xl font-bold">Saiprasad Pandilwar</div>
                   <p>
-                    Muffin, the chief morale officer, and inspiration for MyPerro, isn't just a dog. He's like a little kid with fluffy fur, a wet nose, and a wagging tail full of boundless love. But that all changed one day. He returned from a boarding facility covered in ticks and fleas, with fear
+                    Muffin, the chief morale officer, and inspiration for MyPerro, isn&apos;t just a dog. He&apos;s like a little kid with fluffy fur, a wet nose, and a wagging tail full of boundless love. But that all changed one day. He returned from a boarding facility covered in ticks and fleas, with fear
                     in his eyes and his tail tucked between his legs, pleading for help. It was clear he had been mistreated, and we almost lost him.
                   </p>
-                  <p className="mt-2">From that moment, MyPerro was born. Here, your "perro" is treated just like it is "MyPerro" with love, care, and all the attention they deserve.</p>
+                  <p className="mt-2">From that moment, MyPerro was born. Here, your &quot;perro&quot; is treated just like it is &quot;MyPerro&quot; with love, care, and all the attention they deserve.</p>
                 </div>
                 <div className="image-container">
                   <a href="https://www.google.com/">
