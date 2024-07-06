@@ -38,7 +38,7 @@ const Navbar = () => {
     <nav
       id="navbar"
       style={{ transition: 'top 0.5s ease-in-out' }} // Add this line
-      className="fixed top-0 left-0 right-0 bg-[#FAE9DA] p-2 flex items-center justify-between z-20 font-poppins shadow-lg">
+      className="fixed top-0 left-0 right-0 min-h-[8vh] bg-[#FAE9DA] p-2 flex items-center justify-between z-20 font-poppins shadow-lg">
       <div>
         <Image src="/Logo.png" alt="Logo" width={180} height={180} className="ml-[4rem]" />
       </div>

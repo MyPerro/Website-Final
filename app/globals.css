@@ -47,7 +47,7 @@ body {
   @media (min-width: 1024px) {
     width: 50%; /* Original width for larger screens */
     margin-bottom: 0;
-    height: 65vh;
+    height: 68vh;
   }
 }
 
