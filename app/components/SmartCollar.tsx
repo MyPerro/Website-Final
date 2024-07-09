@@ -88,11 +88,11 @@ const Collar = () => {
 
   return (
     <div ref={sectionRef} className="h-[95vh]">
-<div className="flex flex-col items-start md:items-end m-5 mt-2 space-y-2 px-5 md:px-0">
+<div className="flex flex-col items-start md:items-end m-5 mt-2 space-y-2 px-2 md:px-0">
         <h1 className="text-5xl md:text-8xl text-[#3C130E] font-nohemi">Smart Collar</h1>
         <p className="ml-1 md:ml-0 md:w-[37.3%]">Smart Collar is a collar that helps you track your pet&apos;s location, health, and activity. lalallalal lalalallala</p>
       </div>
-      <section className="h-[50vh] md:h-[76vh] w-[75%] md:w-full relative">
+      <section className="h-[50vh] md:h-[76vh] w-full relative">
         <Canvas dpr={[1, 2]} camera={{ fov: 45 }} shadows={true} ref={meshRef}>
           <PresentationControls speed={2.5} global>
             <Stage environment={'apartment'} intensity={0.01}>

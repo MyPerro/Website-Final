@@ -6,7 +6,7 @@ const HoverParagraph = () => {
   const [hovered2, setHovered2] = useState(false);
 
   return (
-    <div className="hoverpage border-2 border-r-0 border-l-0 border-[#3C130E]">
+    <div className="hoverpage bg-[#3C130E] md:bg-transparent md:border-2 border-r-0 border-l-0 border-[#3C130E]">
       <div className={`hover-container ${hovered ? 'visible' : ''}`} onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)}>
         <span className={`hover-word ${hovered ? 'hovered' : ''}`}>MISSION</span>
         <p className={`hover-paragraph ${hovered ? 'visible' : ''}`}>

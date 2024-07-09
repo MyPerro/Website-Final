@@ -43,6 +43,7 @@ body {
   margin-bottom: 2rem; /* Space between cards on smaller screens */
   @media (min-width: 768px) {
     width: 45%; /* Adjust for tablet and up */
+    height: 60vh; /* Adjusted for better responsiveness */
   }
   @media (min-width: 1024px) {
     width: 50%; /* Original width for larger screens */
@@ -208,6 +209,40 @@ body {
   background-color: #3c130e;
 }
 
+/* Existing styles remain unchanged */
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hover-word, .hover-word2 {
+    font-size: 3rem; /* Smaller font size for mobile */
+    transition: none; /* Disable animations */
+  }
+
+  .hover-word.hovered, .hover-word2.hovered2 {
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    transition: none;
+  }
+
+  .hover-paragraph, .hover-paragraph2 {
+    position: static; /* Disable absolute positioning */
+    transform: none;
+    opacity: 1;
+    visibility: visible;
+    width: auto; /* Let it naturally fit the container */
+    font-size: 1rem; /* Adjust font size for readability */
+    text-align: left; /* Center-align the text */
+    padding: 10px; /* Add some padding for spacing */
+    margin-top: 20px; /* Add space between the title and paragraph */
+    transition: none; /* Disable transitions */
+  }
+
+  .hover-container, .hover-container2 {
+    background-color: transparent; /* Remove background color change */
+  }
+}
+
 .cardBlockPage {
   background-color: #feead8;
 }
@@ -333,7 +368,7 @@ body {
 /* Responsive adjustments for screens smaller than 768px */
 @media (max-width: 768px) {
   .slick-slide > div, .blog-card {
-    width: 98% !important; /* Adjust width to 100% for smaller screens */
+    width: 275px !important; /* Adjust width to 100% for smaller screens */
   }
 }
 
@@ -369,4 +404,3 @@ body {
 .navbar-transition {
   transition: top 0.5s ease-in-out;
 }
-
