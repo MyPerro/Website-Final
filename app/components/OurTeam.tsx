@@ -61,15 +61,15 @@ function Ourteam() {
           <div className="team_people rounded-tl-[3rem] rounded-br-[3rem] shadow-xl">
             <div className="card">
               <div className="card_face card_front">
-                <img src="Shivanshi.png" alt="hi" className="rounded-tl-[3rem]" />
-                <div className="text-black ml-2 text-2xl font-nohemi mt-3 h-16">Shivanshi Rawat</div>
+                <img src="avai.png" alt="hi" className="rounded-tl-[3rem]" />
+                <div className="text-black ml-2 text-2xl font-nohemi mt-3 h-16"></div>
                 <a href="https://www.google.com/">
                   <img className="ml-2 " src="linkedin.png" alt="hi" height="20" width="20" />
                 </a>
               </div>
               <div className="card_face card_back rounded-tl-[3rem] font-neue">
                 <div className="content">
-                  <div className="text-white text-2xl font-bold">Shivanshi Rawat</div>
+                  <div className="text-white text-2xl font-bold"></div>
                   <p>
                     A pet boarding&apos;s carelessness changed the trajectory of my life. Sometimes you don&apos;t know when to stop waiting but have to make peace with the fact. Still I always say I didn&apos;t lose waffy, I carry him in my heart wherever I go. My first pet, love, best friend and
                     indeed endless source of motivation.
@@ -87,15 +87,15 @@ function Ourteam() {
           <div className="team_people rounded-tl-[3rem] rounded-br-[3rem] shadow-xl">
             <div className="card ">
               <div className="card_face card_front">
-                <img src="komo.png" alt="hi" className="rounded-tl-[3rem]" />
-                <div className="text-black ml-2 text-2xl font-nohemi mt-3 h-16">Komolika Chakroborthy</div>
+                <img src="manan.png" alt="hi" className="rounded-tl-[3rem]" />
+                <div className="text-black ml-2 text-2xl font-nohemi mt-3 h-16"></div>
                 <a href="https://www.google.com/">
                   <img className="ml-2 " src="linkedin.png" alt="hi" height="20" width="20" />
                 </a>
               </div>
               <div className="card_face card_back rounded-tl-[3rem] font-neue">
               <div className="content">
-                  <div className="text-white text-2xl font-bold">Komolika Chakroborthy</div>
+                  <div className="text-white text-2xl font-bold"></div>
                   <p>
                     A pet boarding&apos;s carelessness changed the trajectory of my life. Sometimes you don&apos;t know when to stop waiting but have to make peace with the fact. Still I always say I didn&apos;t lose waffy, I carry him in my heart wherever I go. My first pet, love, best friend and
                     indeed endless source of motivation.
