@@ -352,23 +352,32 @@ body {
   align-items: center !important;
 }
 
-/* Existing styles */
+.blog-card {
+  width: 400px; /* Full width on mobile */
+}
+
 .slick-slide > div {
-  width: 400px !important;
-  height: 100% !important;
   display: flex !important;
   justify-content: center !important;
   align-items: center !important;
+  padding: 0 15px; /* Standard padding */
+  flex-wrap: nowrap; /* Prevent wrapping */
 }
 
-.blog-card {
-  width: 400px !important;
+@media (max-width: 1024px) {
+  .slick-slide > div {
+    padding: 0 10px; /* Reduced padding for medium screens */
+  }
 }
 
-/* Responsive adjustments for screens smaller than 768px */
 @media (max-width: 768px) {
-  .slick-slide > div, .blog-card {
-    width: 275px !important; /* Adjust width to 100% for smaller screens */
+  .blog-card {
+    width: 225px !important; /* Full width on small screens */
+    height: 175px !important; /* Adjusted height for better responsiveness */
+    margin: 0px 5px !important; /* Minimal padding for very small screens */
+  }
+  .slick-slide > div {
+    padding: 0 5px; /* Minimal padding for very small screens */
   }
 }
 
@@ -399,6 +408,15 @@ body {
     filter: blur(2px);
     transform: scale(0.80);
     z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .card-blurred {
+    transform: scale(0.75);
+  }
+  .card-focused{
+    transform: scale(1);
+  }
 }
 
 .navbar-transition {
