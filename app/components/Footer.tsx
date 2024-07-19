@@ -14,14 +14,14 @@ const Footer = () => {
           <Image src="/socials/twitter.svg" alt="twitter" width={25} height={25} />
         </div>
       </div>
-      <div className="flex flex-col space-y-1 md:w-[8%] w-full mt-10 mx-8 font-nohemi text-lg">
+      <div className="flex flex-col space-y-1 md:w-[8%] mt-10 mx-8 font-nohemi text-lg">
         <h1 className='text-xl font-bold'>Company</h1>
         <Link href="/contactus">Contact Us</Link>
         <Link href="/contactus">About Us</Link>
         <Link href="/contactus">Terms and Conditions</Link>
         <Link href="/contactus">Contact Us</Link>
       </div>
-      <div className="flex flex-col space-y-1 md:w-[10%] w-full mt-10 mx-8 font-nohemi text-lg">
+      <div className="flex flex-col space-y-1 md:w-[10%] mt-10 mx-8 font-nohemi text-lg">
         <h1 className='text-xl font-bold'>Quick Links</h1>
         <Link href="/contactus">Smart Collar</Link>
         <Link href="/contactus">Become Pet Sitter</Link>

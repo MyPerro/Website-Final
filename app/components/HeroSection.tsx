@@ -30,7 +30,7 @@ export default function HeroSection() {
   return (
     <>
       {showNavbarLogo && (
-        <div className="hidden md:block">
+        <div>
           <Navbar />
         </div>
       )}

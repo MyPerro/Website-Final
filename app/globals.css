@@ -422,3 +422,26 @@ body {
 .navbar-transition {
   transition: top 0.5s ease-in-out;
 }
+
+/* In your CSS file */
+.mobile-layout .grid-layout {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px; /* Adjust spacing between grid items */
+}
+
+.grid-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: #feead8;
+  border-radius: 10px;
+}
+
+.parameters-container {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
