@@ -34,7 +34,7 @@ const Navbar = () => {
 
   return (
     <nav id="navbar" style={{ transition: 'top 0.5s ease-in-out' }} className="fixed top-0 left-0 right-0 min-h-[8vh] bg-[#FAE9DA] p-2 flex items-center justify-between z-20 font-poppins shadow-lg">
-      <div className="flex justify-between items-center">
+      <div className="flex justify-between items-center w-full md:w-[50%]">
       <Image src="/Logo.png" width={180} height={180} alt="Logo" className="w-24 h-8 md:w-[11.25rem] md:h-[3.25rem] md:ml-[3.75rem]" />
         <button className="md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
           {isMenuOpen ? 'X' : '☰'}
