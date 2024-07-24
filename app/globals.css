@@ -399,7 +399,7 @@ body {
 }
 
 .card-focused {
-    transform: scale(1.1);
+    transform: scale(1); /*changes made by varshith*/
     z-index: 2;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
