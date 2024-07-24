@@ -29,7 +29,7 @@ const Services = () => {
               Your browser does not support the video tag.
             </video> */}
               <DotLottieReact
-                src="/Animation.mp4.lottie.json"
+                src="/dogWalking.mp4.lottie.json"
                 loop
                 autoplay
               />    
