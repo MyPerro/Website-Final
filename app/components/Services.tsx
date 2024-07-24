@@ -44,12 +44,17 @@ const Services = () => {
         </div>
         <div className="w-full md:w-1/2 flex flex-col justify-center items-center md:items-start m-2 md:m-10 space-y-4">
           <div className="bg-[#FEEDDD] h-[12rem] w-[10rem] md:h-[25rem] md:w-[22rem] p-2 md:p-8 rounded-tl-[3rem] rounded-br-[3rem] flex justify-center items-center md:rounded-tl-[5rem] md:rounded-br-[5rem] shadow-xl">
-            <Image
+            {/* <Image
               src="/dog_housing.png"
               alt="Dog Housing"
               width={225}
               height={225}
-            />
+            /> */}
+            <DotLottieReact
+                src="/dog_boarding.json"
+                loop
+                autoplay
+              />
           </div>
           <h2 className="text-2xl md:text-4xl text-[#3C130E] font-nohemi">
             Dog Boarding
