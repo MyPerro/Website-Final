@@ -102,11 +102,17 @@ const Collar = () => {
     <div ref={sectionRef} className="h-[95vh]">
       <div className="flex flex-col items-start md:items-end m-5 mt-2 space-y-2 px-2 md:px-0">
         <h1 className="text-5xl md:text-8xl text-[#3C130E] font-nohemi">Smart Collar</h1>
-        <p className="ml-1 md:ml-0 md:w-[37.3%]">Smart Collar is a collar that helps you track your pet&apos;s location, health, and activity. lalallalal lalalallala</p>
+        <p className="ml-1 md:ml-0 md:w-[37.8%]">A smart collar enables you to monitor your pets&apos; location, health status, and daily activity levels for their well-being and your peace of mind.</p>
       </div>
       <section className="h-[50vh] md:h-[76vh] w-full relative">
         <Canvas dpr={[1, 2]} camera={{ fov: 45 }} shadows={true} ref={meshRef}>
-          <PresentationControls speed={2.5} global>
+          <PresentationControls
+            speed={2.5}
+            global
+            config={{ mass: 1, tension: 170, friction: 26 }}
+            polar={[-Math.PI / 2, Math.PI / 2]} // Limits vertical rotation
+            azimuth={[-Infinity, Infinity]} // Allows unlimited horizontal rotation
+          >
             <Stage environment={'apartment'} intensity={0.01}>
               <Model scale={0.016} position={[0, -0.008, 0]} rotation={[0, Math.PI / 5, 0]} />
             </Stage>
@@ -166,7 +172,7 @@ const Collar = () => {
                 <p className="text-[#3C130E] text-lg md:text-2xl font-nohemi leading-tight mt-4">Respiratory Rate Monitoring</p>
               </ul>
             </div>
-            <div className='ml-4'>
+            <div className="ml-4">
               <ul className="list-disc pl-5">
                 <p className="text-[#3C130E] text-lg md:text-2xl font-nohemi leading-tight mt-4">GPS Tracker</p>
                 <p className="text-[#3C130E] text-lg md:text-2xl font-nohemi leading-tight mt-4">Activity Monitoring</p>
