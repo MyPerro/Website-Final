@@ -26,16 +26,31 @@ const Collar = () => {
   useEffect(() => {
     const canvas = meshRef.current?.querySelector('canvas');
     if (canvas) {
+      // Function to prevent default scrolling behavior
       const preventDefault = (e: TouchEvent) => e.preventDefault();
-      canvas.addEventListener('touchstart', preventDefault, { passive: false });
-      canvas.addEventListener('touchmove', preventDefault, { passive: false });
-
-      return () => {
+  
+      // Add event listeners to disable scrolling while interacting with the canvas
+      const addEventListeners = () => {
+        canvas.addEventListener('touchstart', preventDefault, { passive: false });
+        canvas.addEventListener('touchmove', preventDefault, { passive: false });
+      };
+  
+      // Remove event listeners to re-enable scrolling after interaction ends
+      const removeEventListeners = () => {
         canvas.removeEventListener('touchstart', preventDefault);
         canvas.removeEventListener('touchmove', preventDefault);
       };
+  
+      // Attach event listeners
+      addEventListeners();
+  
+      return () => {
+        // Detach event listeners on cleanup
+        removeEventListeners();
+      };
     }
   }, []);
+  
 
   useEffect(() => {
     const observer = new IntersectionObserver(
