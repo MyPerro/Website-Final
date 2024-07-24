@@ -9,7 +9,6 @@ const Model = (props: JSX.IntrinsicElements['group']) => {
 };
 
 const Collar = () => {
-  const meshRef = useRef<HTMLCanvasElement>(null);
   const pathRef1 = useRef<SVGPathElement>(null);
   const pathRef2 = useRef<SVGPathElement>(null);
   const pathRef3 = useRef<SVGPathElement>(null);
@@ -21,6 +20,22 @@ const Collar = () => {
 
   // Module-level variable to track if the animation has already played
   let hasAnimated = false;
+
+  const meshRef = useRef<HTMLCanvasElement | null>(null);
+
+  useEffect(() => {
+    const canvas = meshRef.current?.querySelector('canvas');
+    if (canvas) {
+      const preventDefault = (e: TouchEvent) => e.preventDefault();
+      canvas.addEventListener('touchstart', preventDefault, { passive: false });
+      canvas.addEventListener('touchmove', preventDefault, { passive: false });
+
+      return () => {
+        canvas.removeEventListener('touchstart', preventDefault);
+        canvas.removeEventListener('touchmove', preventDefault);
+      };
+    }
+  }, []);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
