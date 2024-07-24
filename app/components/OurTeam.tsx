@@ -24,10 +24,9 @@ const Ourteam = () => {
           <div className="flex flex-col md:flex-row items-center justify-center w-full md:w-1/2 bg-[#FAE9DA] rounded-xl shadow-md">
             <img src="/profiles/manan.png" alt="Team Member" className="w-full md:w-[18rem] h-full object-cover rounded-l-xl" />
             <div className="flex justify-center items-start flex-col p-4">
-              <p className="text-lg font-bold mb-1">Manan Vyas</p>
-              <p className="text-md italic mb-1">Co-Founder</p>
-              <p className="text-base mb-2">This is the first paragraph of the message. It provides some information about the team member, their role, and their contributions to the team.</p>
-              <p className="text-base mb-4">This is the second paragraph of the message. It might include additional details about their background, experience, or personal interests.</p>
+              <p className="text-lg font-bold mb-2">Manan Vyas</p>
+              <p className="text-md italic mb-3">Co-Founder</p>
+              <p className="text-sm mb-3"><p>Growing up in a household where dogs are treated as members of the family, I absorbed the deep-seated passion my parents had for caring for dogs. What propels me forward is the recognition of a persistent problem that has plagued pet owners for years, including my own family: the need for effective solutions in pet care that truly address the challenges faced by both pets and their owners. It is this realization that serves as the driving force behind MyPerro.</p>              </p>
               <a href="https://www.linkedin.com/in/username" target="_blank" rel="noopener noreferrer">
                 <img src="/socials/linkedin.svg" alt="LinkedIn" className="w-5 h-5" />
               </a>
