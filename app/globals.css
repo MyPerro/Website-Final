@@ -448,5 +448,56 @@ body {
 
 .blog-heading{
   font-weight: bold;
-  
+  font-size: 36px;
+  margin:20px 0px;
+  margin-bottom: 40px;
+}
+
+.blog-para{
+  font-size: 20px;
+  margin: 20px 0px;
+}
+
+.blog-page{
+  background-image: url('../public/dog-diet-1.png');
+  background-repeat: no-repeat;
+  background-size: 100vw;
+}
+
+.blog-div{
+  display:flex;
+  flex-direction: column;
+  transform: translateY(400px);
+  background-color: #FEEDDD;
+  padding:10px 60px;
+  margin: 0px 12vw;
+  margin-top: 50px;
+  margin-bottom: 450px;
+}
+
+.blog-mini-heading{
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.blog-ol{
+  list-style-type: decimal;
+  font-size: 20px;
+  margin: 20px 23px;
+}
+
+.blog-img{
+  margin: 20px 0px;
+  align-self: center;
+  width: 30vw;
+}
+
+.blog-img-desc{
+  align-self: center;
+}
+
+
+.blog-author{
+  font-size: 24px;
+  font-style: italic;
 }
