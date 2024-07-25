@@ -15,7 +15,7 @@ export default function Dog_Safety() {
           <p className="blog-para">
             If we talk about having a companion who brings immense joy, love and
             loyalty in our lives, a pet dog is a perfect example of that. Dogs
-            have earned the title of "man's best friend" for good reason. These
+            have earned the title of &quot;man&apos;s best friend&quot; for good reason. These
             loyal, affectionate, and playful creatures have been a part of human
             lives for thousands of years. However, being a responsible pet owner
             or a responsible citizen means ensuring their safety at all times.
@@ -31,7 +31,7 @@ export default function Dog_Safety() {
             objects that could be swallowed, and unsecured trash bins that might
             contain harmful substances. Regular veterinary check-ups, up-to-date
             vaccinations, and flea and tick preventatives are critical to
-            maintaining our pets' health. Proper training and socialisation are
+            maintaining our pets&apos; health. Proper training and socialisation are
             also vital, helping dogs feel secure and behave appropriately in
             various environments. When stepping outside, a sturdy leash and
             harness, avoiding extreme weather conditions, and never leaving our
@@ -51,8 +51,8 @@ export default function Dog_Safety() {
             small objects that could be swallowed out of reach can be of great
             help. A secure environment prevents accidents and keeps your dog
             safe and sound. Training your dog not only makes them well-behaved
-            but also enhances their safety. Commands like "sit," "stay," and
-            "come" can prevent your dog from running into dangerous situations.
+            but also enhances their safety. Commands like &quot;sit,&quot; &quot;stay,&quot; and
+            &quot;come&quot; can prevent your dog from running into dangerous situations.
             Additionally, proper socialisation helps your dog interact safely
             with other dogs and people, reducing the risk of conflicts and
             injuries.
