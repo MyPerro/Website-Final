@@ -1,9 +1,16 @@
-'use client';
+"use client";
 import Image from "next/image";
-import { DotLottieReact } from  '@lottiefiles/dotlottie-react';
-
+import { useState } from "react";
+import {
+  DotLottiePlayer,
+  Controls,
+  PlayerEvents,
+} from "@dotlottie/react-player";
+import "@dotlottie/react-player/dist/index.css";
 
 const Services = () => {
+  const [isLoaded, setLoaded] = useState(false);
+
   return (
     <div
       className="flex flex-col md:flex-row justify-center items-center px-2 md:px-[3rem] m-5 md:m-10 mb-9 min-h-[90vh]"
@@ -28,11 +35,7 @@ const Services = () => {
               <source src="/Animation.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video> */}
-              <DotLottieReact
-                src="/DogWalking-f.json"
-                loop
-                autoplay
-              />    
+            <DotLottiePlayer src="Animation.mp4.lottie.json" loop autoplay />
           </div>
           <h2 className="text-2xl md:text-4xl text-[#3C130E] font-nohemi">
             Dog Walking
@@ -43,18 +46,14 @@ const Services = () => {
           </p>
         </div>
         <div className="w-full md:w-1/2 flex flex-col justify-center items-center md:items-start m-2 md:m-10 space-y-4">
-          <div className="bg-[#FEEDDD] h-[12rem] w-[10rem] md:h-[25rem] md:w-[22rem] p-2 md:p-8 rounded-tl-[3rem] rounded-br-[3rem] flex justify-center items-center md:rounded-tl-[5rem] md:rounded-br-[5rem] shadow-xl">
+          <div className="bg-[#FEEDDD] h-[12rem] w-[9rem] md:h-[25rem] md:w-[22rem] md:p-8 rounded-tl-[3rem] rounded-br-[3rem] flex justify-center items-center md:rounded-tl-[5rem] md:rounded-br-[5rem] shadow-xl">
             {/* <Image
               src="/dog_housing.png"
               alt="Dog Housing"
               width={225}
               height={225}
             /> */}
-            <DotLottieReact
-                src="/dog_boarding.json"
-                loop
-                autoplay
-              />
+            <DotLottiePlayer src="/dog_boarding.json" loop autoplay />
           </div>
           <h2 className="text-2xl md:text-4xl text-[#3C130E] font-nohemi">
             Dog Boarding
