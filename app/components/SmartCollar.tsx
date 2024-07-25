@@ -4,7 +4,7 @@ import { useGLTF, Stage, PresentationControls } from '@react-three/drei';
 import { useState, useEffect, useRef } from 'react';
 
 const Model = (props: JSX.IntrinsicElements['group']) => {
-  const scene = useGLTF('/dogCollar.glb').scene;
+  const scene = useGLTF('dogCollar.glb').scene;
   return <primitive object={scene} {...props} />;
 };
 
@@ -196,7 +196,7 @@ const Collar = () => {
           <div className="grid grid-cols-2 gap-4 mt-2 p-2 font-semibold">
             <div>
               <ul className="list-disc pl-5">
-                <p className="text-[#3C130E] text-lg md:text-2xl font-nohemi mt-4">Geofencing</p>
+                <p className="text-[#3C130E] text-lg md:text-2xl font-nohemi mt-3">Geofencing</p>
                 <p className="text-[#3C130E] text-lg md:text-2xl font-nohemi leading-tight mt-4">Heart Rate Monitoring</p>
                 <p className="text-[#3C130E] text-lg md:text-2xl font-nohemi leading-tight mt-4">Respiratory Rate Monitoring</p>
               </ul>
