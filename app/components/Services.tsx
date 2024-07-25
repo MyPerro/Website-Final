@@ -23,7 +23,7 @@ const Services = () => {
       </div>
       <div className="w-full md:w-[65%] flex flex-row md:flex-row justify-center items-center md:pl-20 mt-10 md:mt-0">
         <div className="w-full md:w-1/2 flex flex-col justify-center items-center md:items-start m-2 md:m-10 space-y-4">
-          <div className="bg-[#FEEDDD] h-[12rem] w-[10rem] md:h-[25rem] md:w-[22rem] p-2 md:p-8 flex justify-center items-center rounded-tl-[3rem] rounded-br-[3rem] md:rounded-tl-[5rem] md:rounded-br-[5rem] shadow-xl">
+          <div className="bg-[#fbead8] h-[12rem] w-[10rem] md:h-[25rem] md:w-[22rem] p-2 md:p-8 flex justify-center items-center rounded-tl-[3rem] rounded-br-[3rem] md:rounded-tl-[5rem] md:rounded-br-[5rem] shadow-xl">
             {/* <video width="300" height="300" autoPlay loop muted>
               <source src="/Animation.mp4" type="video/mp4" />
               Your browser does not support the video tag.
