@@ -5,13 +5,14 @@ import Image from "next/image";
 export default function Dog_Safety() {
   return (
     <>
-      <div className="blog-page">
         <Navbar />
+        <Image src="/dog-diet-1.png" alt="Background Image of the Blog" width={1000} height={100} className="blog-bg-img"/>
         <div className="blog-div">
           <h1 className="blog-heading">
             How to make the Paw-fect Meal For Your Dog
           </h1>
-          <h2 className="blog-author">- Author</h2>
+          <h2 className="blog-author">- Kavya Sudhame</h2>
+          <h2 className="blog-author pl-[15px]">Content Writer @MyPerro</h2>
           <p className="blog-para">
             As a pet paw-rent, you want what&apos;s best for your dog. Be it the toys
             they play with, the kind of exercise they have on a daily basis, the
@@ -97,9 +98,8 @@ export default function Dog_Safety() {
             className="blog-img"
           />
           <p className="blog-img-desc">
-            Nutrients required for the dog src:{" "}
-            <a href="https://www.barclondon.com/">
-              https://www.barclondon.com/
+            <a href="https://www.barclondon.com/" className="text-blue-700  italic" target="_blank">
+            Nutrients required for the dog
             </a>
           </p>
           <p className="blog-para">
@@ -163,8 +163,8 @@ export default function Dog_Safety() {
             will ensure that they live a comfortable and healthy life. Happy
             feeding!
           </p>
+          <p className="blog-safety">Note: The above images are for only illustrations purpose</p>
         </div>
-      </div>
       <Footer />
     </>
   );
