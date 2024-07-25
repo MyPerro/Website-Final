@@ -3,9 +3,9 @@ import React from 'react';
 const Ourteam = () => {
   return (
     <div className="p-10 mx-auto">
-      <h1 className="font-nohemi text-6xl mb-6 mt-12">Our Team</h1>
+      <h1 className="font-nohemi text-6xl mb-2 mt-12">Our Team</h1>
       <div className="flex flex-col justify-center items-center md:h-[100vh] space-y-6 tracking-wide">
-        <div className="w-full md:h-[45vh] flex flex-col md:flex-row">
+        <div className="w-full md:h-auto flex flex-col md:flex-row">
           <div className="flex flex-col md:flex-row items-center justify-center w-full md:w-1/2 bg-[#FAE9DA] mr-4 mb-4 md:mb-0 rounded-xl shadow-md">
             <img src="/profiles/avai.png" alt="Team Member" className="w-full md:w-[18rem] h-full object-cover rounded-l-xl" />
             <div className="flex justify-center items-start flex-col p-4">
@@ -38,9 +38,9 @@ const Ourteam = () => {
             </div>
           </div>
         </div>
-        <div className="md:h-[45vh] flex flex-row w-full">
+        <div className="md:h-auto flex flex-row w-full">
           <div className="flex flex-col md:flex-row justify-center items-center w-full space-y-4 md:space-x-4">
-            <div className="w-full md:w-1/3 h-auto md:h-[45vh] bg-[#FAE9DA] flex flex-col items-center rounded-xl shadow-md mt-4">
+            <div className="w-full md:w-1/3 h-auto bg-[#FAE9DA] flex flex-col items-center rounded-xl shadow-md mt-4">
               <img src="/profiles/Arunima.jpg" alt="Team Member" className="rounded-full w-40 h-40 mb-4 mt-4" />
               <p className="font-bold font-nohemi">Arunima Shrivastava</p>
               <p className="italic font-nohemi">IOT Head</p>
@@ -48,7 +48,7 @@ const Ourteam = () => {
                 <img src="/socials/linkedin.svg" alt="LinkedIn" className="w-6 h-6 mt-4 mb-4" />
               </a>
             </div>
-            <div className="w-full md:w-1/3 h-auto md:h-[45vh] bg-[#FAE9DA] flex flex-col items-center rounded-xl shadow-md">
+            <div className="w-full md:w-1/3 h-auto bg-[#FAE9DA] flex flex-col items-center rounded-xl shadow-md">
               <img src="/profiles/Kunal.jpg" alt="Team Member" className="rounded-full w-40 h-40 mb-4 mt-4" />
               <p className="font-bold font-nohemi">Kunal Sinha</p>
               <p className="italic font-nohemi">IOT Developer</p>
@@ -56,7 +56,7 @@ const Ourteam = () => {
                 <img src="/socials/linkedin.svg" alt="LinkedIn" className="w-6 h-6 mt-4 mb-4" />
               </a>
             </div>
-            <div className="w-full md:w-1/3 h-auto md:h-[45vh] bg-[#FAE9DA] flex flex-col items-center rounded-xl shadow-md">
+            <div className="w-full md:w-1/3 h-auto bg-[#FAE9DA] flex flex-col items-center rounded-xl shadow-md">
               <img src="/profiles/Harsh.jpeg" alt="Team Member" className="rounded-full w-40 h-40 mb-4 mt-4" />
               <p className="font-bold font-nohemi">Harsh Shah</p>
               <p className="italic font-nohemi">Lead Frontend</p>
@@ -64,7 +64,7 @@ const Ourteam = () => {
                 <img src="/socials/linkedin.svg" alt="LinkedIn" className="w-6 h-6 mt-4 mb-4" />
               </a>
             </div>
-            <div className="w-full md:w-1/3 h-auto md:h-[45vh] bg-[#FAE9DA] flex flex-col items-center rounded-xl shadow-md">
+            <div className="w-full md:w-1/3 h-auto bg-[#FAE9DA] flex flex-col items-center rounded-xl shadow-md">
               <img src="/profiles/Sarvesh.jpg" alt="Team Member" className="rounded-full w-40 h-40 mb-4 mt-4" />
               <p className="font-bold font-nohemi">Sarvesh Dakhore</p>
               <p className="italic font-nohemi">Lead Backend</p>
@@ -72,7 +72,7 @@ const Ourteam = () => {
                 <img src="/socials/linkedin.svg" alt="LinkedIn" className="w-6 h-6 mt-4 mb-4" />
               </a>
             </div>
-            <div className="w-full md:w-1/3 h-auto md:h-[45vh] bg-[#FAE9DA] flex flex-col items-center rounded-xl shadow-md">
+            <div className="w-full md:w-1/3 h-auto bg-[#FAE9DA] flex flex-col items-center rounded-xl shadow-md">
               <img src="/profiles/Sameer.jpg" alt="Team Member" className="rounded-full w-40 h-40 mb-4 mt-4" />
               <p className="font-bold font-nohemi">Sameer Lalchandani</p>
               <p className="italic mb-2 font-nohemi">Lead Designer</p>
@@ -80,7 +80,7 @@ const Ourteam = () => {
                 <img src="/socials/linkedin.svg" alt="LinkedIn" className="w-6 h-6 mt-2 mb-4" />
               </a>
             </div>
-            <div className="w-full md:w-1/3 h-auto md:h-[45vh] bg-[#FAE9DA] flex flex-col items-center rounded-xl shadow-md">
+            <div className="w-full md:w-1/3 h-auto bg-[#FAE9DA] flex flex-col items-center rounded-xl shadow-md">
               <img src="/profiles/Shreya.jpg" alt="Team Member" className="rounded-full w-40 h-40 mb-4 mt-4" />
               <p className="font-bold font-nohemi">Shreya Bakre</p>
               <p className="italic font-nohemi">UI/UX Designer</p>
