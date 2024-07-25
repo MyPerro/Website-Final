@@ -58,8 +58,7 @@ body {
   transform: translateX(-20%) translateY(-30%);
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.3s ease, visibility 1s ease;
-  transition-delay: 0.4s;
+  transition: none;
   width: 60vw; /* Adjust width as needed */
   text-align: left;
   padding: 1vh;
@@ -71,6 +70,8 @@ body {
   opacity: 1;
   visibility: visible;
   left: calc(50% + 20px); /* Adjust distance from the word */
+  transition: opacity 0.3s ease, visibility 1s ease;
+  transition-delay: 0.4s;
 }
 
 .hover-container.visible {
@@ -105,19 +106,20 @@ body {
   transform: translateX(-20%) translateY(-30%);
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.3s ease, visibility 1s ease;
-  transition-delay: 0.4s;
   width: 60vw; /* Adjust width as needed */
   text-align: left;
   padding: 1vh;
   font-size: 1.3vw;
   color: white;
+  transition: none;
 }
 
 .hover-paragraph2.visible2 {
   opacity: 1;
   visibility: visible;
   left: calc(50% + 20px); /* Adjust distance from the word */
+  transition: opacity 0.3s ease, visibility 1s ease;
+  transition-delay: 0.4s;
 }
 
 .hover-container2.visible2 {
