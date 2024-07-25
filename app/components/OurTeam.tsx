@@ -3,7 +3,7 @@ import React from 'react';
 const Ourteam = () => {
   return (
     <div className="p-10 mx-auto">
-      <h1 className="font-nohemi text-6xl mb-2 mt-12">Our Team</h1>
+      <h1 className="font-nohemi text-6xl mb-8 mt-12">Our Team</h1>
       <div className="flex flex-col justify-center items-center h-auto space-y-6 tracking-wide">
         <div className="w-full md:h-auto flex flex-col md:flex-row">
           <div className="flex flex-col md:flex-row items-center justify-center w-full md:w-1/2 bg-[#FAE9DA] mr-4 mb-4 md:mb-0 rounded-xl shadow-md">
