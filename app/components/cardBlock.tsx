@@ -2,16 +2,17 @@
 import React from 'react';
 import Slider from 'react-slick';
 import Image from 'next/image';
+import { redirect } from 'next/navigation'
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
 const cardData = [
-  { title: 'Card 1', description: 'Description of Card 1' },
-  { title: 'Card 2', description: 'Description of Card 2' },
-  { title: 'Card 3', description: 'Description of Card 3' },
-  { title: 'Card 4', description: 'Description of Card 1' },
-  { title: 'Card 5', description: 'Description of Card 2' },
-  { title: 'Card 6', description: 'Description of Card 3' },
+  { title: 'Card 1', description: 'Description of Card 1', link:'/blog/dog-diet' },
+  { title: 'Card 2', description: 'Description of Card 2', link:'/blog/dog-diet' },
+  { title: 'Card 3', description: 'Description of Card 3', link:'/blog/dog-diet' },
+  { title: 'Card 4', description: 'Description of Card 1', link:'/blog/dog-diet' },
+  { title: 'Card 5', description: 'Description of Card 2', link:'/blog/dog-diet' },
+  { title: 'Card 6', description: 'Description of Card 3', link:'/blog/dog-diet' },
 ];
 
 const CardCarousel = () => {
@@ -48,7 +49,7 @@ const settings = {
       <div className="p-5 text-center flex flex-col justify-between w-1/2">
         <h2 className="text-lg md:text-2xl font-bold text-gray-800">{card.title}</h2>
         <p className="text-sm md:text-lg text-gray-600">{card.description}</p>
-        <button className="bg-blue-500 text-white font-bold md:py-2 md:px-4 py-1 px-2 md:text-lg text-sm mt-6 md:mt-0 rounded hover:bg-blue-700 transition duration-300 ease-in-out">Read More</button>
+        <button className="bg-orange-500 text-white font-bold md:py-2 md:px-4 py-1 px-2 md:text-lg text-sm mt-6 md:mt-0 rounded hover:bg-blue-700 transition duration-300 ease-in-out" ><a href={card.link}>Read More</a></button>
       </div>
     </div>
   </div>
