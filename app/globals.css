@@ -435,6 +435,10 @@ body {
   color:gray
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 @media (max-width: 768px) {
   .blog-slider-main{
     width: 7em;
