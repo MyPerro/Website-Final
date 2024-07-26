@@ -1,6 +1,6 @@
 'use client';
 import { Canvas, useFrame } from 'react-three-fiber';
-import { useGLTF, Stage, PresentationControls } from '@react-three/drei';
+import { useGLTF, Stage, PresentationControls, OrbitControls } from '@react-three/drei';
 import { useState, useEffect, useRef } from 'react';
 
 const Model = (props: JSX.IntrinsicElements['group']) => {
@@ -135,17 +135,17 @@ const Collar = () => {
       </div>
       <section className="h-[50vh] md:h-[76vh] w-full relative">
         <Canvas dpr={[1, 2]} camera={{ fov: 45 }} shadows={true} ref={meshRef}>
-          <PresentationControls
+          {/* <PresentationControls
             speed={5}
             global
             config={{ mass: 1, tension: 170, friction: 26 }}
             polar={[-Math.PI / 2, Math.PI / 2]} // Limits vertical rotation
             azimuth={[-Infinity, Infinity]} // Allows unlimited horizontal rotation
-          >
+          > */}
+          <OrbitControls enableZoom={false}/>
             <Stage environment={'apartment'} intensity={0.01}>
               <Model scale={0.016} position={[0, -0.008, 0]} rotation={[0, Math.PI / 5, 0]} />
             </Stage>
-          </PresentationControls>
         </Canvas>
         {!isMobile ? (
           <>
