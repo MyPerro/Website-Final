@@ -448,6 +448,8 @@ html {
   .blog-desc-main{
     font-size: 15px;
     line-height: normal;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
   }
 
   .blog-img{

@@ -53,7 +53,7 @@ const Navbar = () => {
         <Link href="#contact" className="text-zinc-800">
           CONTACT US
         </Link>
-        <button className="bg-orange-500 text-white px-6 py-2 rounded-lg">Login</button>
+        <button className="bg-orange-500 text-white px-6 py-2 rounded-lg">Join Community</button>
       </div>
       {isMenuOpen && (
         <div className="absolute top-0 right-0 mt-[8vh] mr-2 p-3 bg-white rounded-lg shadow-lg lg:hidden">
@@ -61,7 +61,7 @@ const Navbar = () => {
             <Link href="#hero">HOME</Link>
             <Link href="#services">ABOUT US</Link>
             <Link href="#contact">CONTACT US</Link>
-            <button className="bg-orange-500 text-white px-4 py-1 rounded-lg">Login</button>
+            <button className="bg-orange-500 text-white px-4 py-1 rounded-lg">Join Community</button>
           </div>
         </div>
       )}
