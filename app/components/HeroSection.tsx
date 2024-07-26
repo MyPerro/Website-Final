@@ -37,6 +37,7 @@ export default function HeroSection() {
       <div
         ref={firstSectionRef}
         className="bg-cover bg-center h-screen w-full flex flex-col md:items-start items-center md:justify-end justify-center"
+        id='hero'
         style={{
           backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/hero-shiba.jpg')",
         }}>
