@@ -1,10 +1,10 @@
 'use client';
 import { Canvas, useFrame } from 'react-three-fiber';
-import { useGLTF, Stage, PresentationControls } from '@react-three/drei';
+import { useGLTF, Stage, PresentationControls, OrbitControls } from '@react-three/drei';
 import { useState, useEffect, useRef } from 'react';
 
 const Model = (props: JSX.IntrinsicElements['group']) => {
-  const scene = useGLTF('/dogCollar.glb').scene;
+  const scene = useGLTF('dogCollar.glb').scene;
   return <primitive object={scene} {...props} />;
 };
 
@@ -20,36 +20,6 @@ const Collar = () => {
 
   // Module-level variable to track if the animation has already played
   let hasAnimated = false;
-
-  const meshRef = useRef<HTMLCanvasElement | null>(null);
-
-  useEffect(() => {
-    const canvas = meshRef.current?.querySelector('canvas');
-    if (canvas) {
-      // Function to prevent default scrolling behavior
-      const preventDefault = (e: TouchEvent) => e.preventDefault();
-
-      // Add event listeners to disable scrolling while interacting with the canvas
-      const addEventListeners = () => {
-        canvas.addEventListener('touchstart', preventDefault, { passive: false });
-        canvas.addEventListener('touchmove', preventDefault, { passive: false });
-      };
-
-      // Remove event listeners to re-enable scrolling after interaction ends
-      const removeEventListeners = () => {
-        canvas.removeEventListener('touchstart', preventDefault);
-        canvas.removeEventListener('touchmove', preventDefault);
-      };
-
-      // Attach event listeners
-      addEventListeners();
-
-      return () => {
-        // Detach event listeners on cleanup
-        removeEventListeners();
-      };
-    }
-  }, []);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -130,22 +100,22 @@ const Collar = () => {
   return (
     <div ref={sectionRef} className="h-[95vh]">
       <div className="flex flex-col items-start md:items-end m-5 mt-2 space-y-2 px-2 md:px-0">
-        <h1 className="text-5xl md:text-8xl text-[#3C130E] font-nohemi w-[40%]">Smart Collar</h1>
+        <h1 className="text-5xl md:text-8xl text-[#3C130E] font-nohemi w-full md:w-[40%]">Smart Collar</h1>
         <p className="ml-1 md:ml-0 md:w-[40%]">A smart collar enables you to monitor your pets&apos; location, health status, and daily activity levels for their well-being and your peace of mind.</p>
       </div>
       <section className="h-[50vh] md:h-[76vh] w-full relative">
-        <Canvas dpr={[1, 2]} camera={{ fov: 45 }} shadows={true} ref={meshRef}>
-          <PresentationControls
+        <Canvas dpr={[1, 2]} shadows={true}>
+          {/* <PresentationControls
             speed={5}
             global
             config={{ mass: 1, tension: 170, friction: 26 }}
             polar={[-Math.PI / 2, Math.PI / 2]} // Limits vertical rotation
             azimuth={[-Infinity, Infinity]} // Allows unlimited horizontal rotation
-          >
+          > */}
+          <OrbitControls enableZoom={false} enablePan={false}/>
             <Stage environment={'apartment'} intensity={0.01}>
               <Model scale={0.016} position={[0, -0.008, 0]} rotation={[0, Math.PI / 5, 0]} />
             </Stage>
-          </PresentationControls>
         </Canvas>
         {!isMobile ? (
           <>
@@ -196,7 +166,7 @@ const Collar = () => {
           <div className="grid grid-cols-2 gap-4 mt-2 p-2 font-semibold">
             <div>
               <ul className="list-disc pl-5">
-                <p className="text-[#3C130E] text-lg md:text-2xl font-nohemi mt-4">Geofencing</p>
+                <p className="text-[#3C130E] text-lg md:text-2xl font-nohemi mt-3">Geofencing</p>
                 <p className="text-[#3C130E] text-lg md:text-2xl font-nohemi leading-tight mt-4">Heart Rate Monitoring</p>
                 <p className="text-[#3C130E] text-lg md:text-2xl font-nohemi leading-tight mt-4">Respiratory Rate Monitoring</p>
               </ul>
