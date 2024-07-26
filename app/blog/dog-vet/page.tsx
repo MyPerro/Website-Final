@@ -27,10 +27,10 @@ export default function DogVet() {
         <h2 className="blog-author-pos">Content Writer @MyPerro</h2>
         <p className="blog-para">
           As pet owners, we cherish our animal companions and strive to give
-          them the best care possible. However, amidst our busy lives, it's easy
+          them the best care possible. However, amidst our busy lives, it&apos;s easy
           to overlook the importance of regular veterinary check-ups. These
           routine visits are vital for ensuring the long-term health and
-          happiness of our pets. Here’s why regular vet check-ups should be a
+          happiness of our pets. Here&apos;s why regular vet check-ups should be a
           non-negotiable part of your pet care routine.
         </p>
 
@@ -42,12 +42,12 @@ export default function DogVet() {
           veterinarians to identify issues such as dental disease, heart
           problems, or even cancers at an early stage. Catching these problems
           early often leads to more effective treatments and better outcomes,
-          potentially saving your pet's life.
+          potentially saving your pet&apos;s life.
         </p>
 
         <h3 className="blog-mini-heading">Preventative Measures</h3>
         <p className="blog-para">
-          Preventative care is the best strategy for maintaining your pet’s
+          Preventative care is the best strategy for maintaining your pet&apos;s
           health. During a check-up, your vet can administer vaccinations,
           perform dental cleanings, and provide treatments for parasites. These
           preventative measures protect your pet from a range of diseases and
@@ -70,14 +70,14 @@ export default function DogVet() {
           require ongoing management and monitoring. Routine vet visits allow
           for adjustments in treatment plans, ensuring that your pet receives
           the most appropriate care for their condition. This proactive approach
-          helps in maintaining your pet’s quality of life and comfort.
+          helps in maintaining your pet&apos;s quality of life and comfort.
         </p>
 
         <h3 className="blog-mini-heading">
           Expert Nutritional and Behavioural Guidance
         </h3>
         <p className="blog-para">
-          Veterinary check-ups provide a great opportunity to discuss your pet’s
+          Veterinary check-ups provide a great opportunity to discuss your pet&apos;s
           diet and behaviour. Vets can offer tailored advice on nutrition,
           helping to prevent obesity and related health issues. Additionally,
           they can address behavioural concerns, providing solutions for
@@ -117,7 +117,7 @@ export default function DogVet() {
           How Often Should You Visit the Vet?
         </h3>
         <p className="blog-para">
-          The frequency of check-ups depends on your pet's age and health.
+          The frequency of check-ups depends on your pet&apos;s age and health.
           Generally:
         </p>
         <ol className="blog-ol">
@@ -146,7 +146,7 @@ export default function DogVet() {
         <p className="blog-para">A typical check-up includes:</p>
         <ol className="blog-ol">
           <li>
-            Physical examination: Your vet will assess your pet's overall
+            Physical examination: Your vet will assess your pet&apos;s overall
             health, including weight, temperature, heart rate, and respiratory
             rate.
           </li>
@@ -160,7 +160,7 @@ export default function DogVet() {
             between the paws.
           </li>
           <li>
-            Dental care: Your pet's teeth will be examined for signs of dental
+            Dental care: Your pet&apos;s teeth will be examined for signs of dental
             disease.
           </li>
           <li>
@@ -178,7 +178,7 @@ export default function DogVet() {
           visits also strengthen the bond between you and your pet and can lead
           to financial savings in the long run. Prioritizing regular vet
           check-ups ensures that your pet enjoys a long, healthy, and happy
-          life. So, make that appointment today and invest in your pet’s future
+          life. So, make that appointment today and invest in your pet&apos;s future
           well-being!
         </p>
       </div>
