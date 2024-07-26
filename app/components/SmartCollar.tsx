@@ -21,36 +21,6 @@ const Collar = () => {
   // Module-level variable to track if the animation has already played
   let hasAnimated = false;
 
-  const meshRef = useRef<HTMLCanvasElement | null>(null);
-
-  useEffect(() => {
-    const canvas = meshRef.current?.querySelector('canvas');
-    if (canvas) {
-      // Function to prevent default scrolling behavior
-      const preventDefault = (e: TouchEvent) => e.preventDefault();
-
-      // Add event listeners to disable scrolling while interacting with the canvas
-      const addEventListeners = () => {
-        canvas.addEventListener('touchstart', preventDefault, { passive: false });
-        canvas.addEventListener('touchmove', preventDefault, { passive: false });
-      };
-
-      // Remove event listeners to re-enable scrolling after interaction ends
-      const removeEventListeners = () => {
-        canvas.removeEventListener('touchstart', preventDefault);
-        canvas.removeEventListener('touchmove', preventDefault);
-      };
-
-      // Attach event listeners
-      addEventListeners();
-
-      return () => {
-        // Detach event listeners on cleanup
-        removeEventListeners();
-      };
-    }
-  }, []);
-
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -134,7 +104,7 @@ const Collar = () => {
         <p className="ml-1 md:ml-0 md:w-[40%]">A smart collar enables you to monitor your pets&apos; location, health status, and daily activity levels for their well-being and your peace of mind.</p>
       </div>
       <section className="h-[50vh] md:h-[76vh] w-full relative">
-        <Canvas dpr={[1, 2]} camera={{ fov: 45 }} shadows={true} ref={meshRef}>
+        <Canvas dpr={[1, 2]} shadows={true}>
           {/* <PresentationControls
             speed={5}
             global
@@ -142,7 +112,7 @@ const Collar = () => {
             polar={[-Math.PI / 2, Math.PI / 2]} // Limits vertical rotation
             azimuth={[-Infinity, Infinity]} // Allows unlimited horizontal rotation
           > */}
-          <OrbitControls enableZoom={false}/>
+          <OrbitControls enableZoom={false} enablePan={false}/>
             <Stage environment={'apartment'} intensity={0.01}>
               <Model scale={0.016} position={[0, -0.008, 0]} rotation={[0, Math.PI / 5, 0]} />
             </Stage>
