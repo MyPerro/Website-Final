@@ -1,6 +1,11 @@
 import Navbar from "@/app/components/Navbar";
 import Footer from "@/app/components/Footer";
 import Image from "next/image";
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Dog Safety',
+};
 
 export default function Dog_Safety() {
   return (
@@ -11,7 +16,8 @@ export default function Dog_Safety() {
         <h1 className="blog-heading">
           Dog safety : Tips for preventing accidents and injuries
         </h1>
-        <h2 className="blog-author">- Author</h2>
+        <h2 className="blog-author">- Arunima Mishra</h2>
+        <h2 className="blog-author pl-[15px]">Content Writer @MyPerro</h2>
         <p className="blog-para">
           If we talk about having a companion who brings immense joy, love and
           loyalty in our lives, a pet dog is a perfect example of that. Dogs

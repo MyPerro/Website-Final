@@ -1,6 +1,11 @@
 import Navbar from "@/app/components/Navbar";
 import Footer from "@/app/components/Footer";
 import Image from "next/image";
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Dog Daycare',
+};
 
 export default function dogDaycare() {
   return (
@@ -18,7 +23,7 @@ export default function dogDaycare() {
           Unlocking the Benefits of Dog Daycare: Enhancing Your Pet&apos;s Life
           Through Socialization
         </h1>
-        <h2 className="blog-author">- Kavya Sudhame</h2>
+        <h2 className="blog-author">- Nehal Gupta</h2>
         <h2 className="blog-author pl-[15px]">Content Writer @MyPerro</h2>
         <p className="blog-para">
           Is your furry friend feeling lonely or bored during the day? Dog
