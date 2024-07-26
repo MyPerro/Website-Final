@@ -43,7 +43,7 @@ const Navbar = () => {
         </button>
       </div>
       {/* Adjusted: Hide original navbar links on mobile when menu is open */}
-      <div className={`hidden md:flex justify-center items-center space-x-12 font-semibold mr-[2rem] ${isMenuOpen ? 'hidden' : 'flex'}`}>
+      <div className={`hidden lg:flex justify-center items-center space-x-12 font-semibold mr-[2rem] ${isMenuOpen ? 'hidden' : 'flex'}`}>
         <Link href="#hero" className="text-zinc-800">
           HOME
         </Link>
