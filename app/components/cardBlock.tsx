@@ -57,7 +57,7 @@ const settings = {
       <div className="p-5 text-center flex flex-col justify-between w-1/2">
         <h2 className="text-lg font-bold text-gray-800 pt-2 blog-desc-main">{card.title}</h2>
         <p className="text-sm md:text-lg text-gray-600">{card.description}</p>
-        <button className="bg-orange-500 text-white font-bold md:mb-5 md:py-1 md:px-4 pt-1 px-2 md:text-[0.5rem] text-sm mt-6 md:mt-0 rounded hover:bg-orange-600 transition duration-300 ease-in-out" ><a href={card.link} target='_blank'>Read More</a></button>
+        <button className="bg-orange-500 text-white font-bold md:mb-5 md:py-1 md:px-4 pt-1 px-2 text-sm   mt-6 md:mt-0 rounded hover:bg-orange-600 transition duration-300 ease-in-out" ><a href={card.link} target='_blank'>Read More</a></button>
       </div>
     </div>
   </div>
