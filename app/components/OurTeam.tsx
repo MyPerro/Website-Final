@@ -42,8 +42,8 @@ const Ourteam = () => {
           <div className="flex flex-col md:flex-row justify-center items-center w-full space-y-4 md:space-x-4">
             <div className="w-full md:w-1/3 h-auto bg-[#FAE9DA] flex flex-col items-center rounded-xl shadow-md mt-4">
               <img src="/profiles/Arunima.jpg" alt="Team Member" className="rounded-full w-40 h-40 mb-4 mt-4" />
-              <p className="font-bold font-nohemi">Arunima Shrivastava</p>
-              <p className="italic font-nohemi">IOT Head</p>
+              <p className="font-bold font-nohemi">Arunima Srivastava</p>
+              <p className="italic font-nohemi">Lead IOT</p>
               <a href="https://www.linkedin.com/in/arunima-srivastava05/" target="_blank" rel="noopener noreferrer">
                 <img src="/socials/linkedin.svg" alt="LinkedIn" className="w-6 h-6 mt-4 mb-4" />
               </a>
