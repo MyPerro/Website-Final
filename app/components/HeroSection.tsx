@@ -38,7 +38,7 @@ export default function HeroSection() {
         ref={firstSectionRef}
         className="bg-cover bg-center h-screen w-full flex flex-col md:items-start items-center md:justify-end justify-center"
         style={{
-          backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/dog.jpg')",
+          backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/hero-shiba.jpg')",
         }}>
         <motion.img src="/Group.png" alt="MyPerro logo" className="md:pl-20 md:pb-2 p-5" style={{ width: fontSize }} />
       </div>
