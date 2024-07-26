@@ -88,7 +88,7 @@ const Collar = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768); // Assuming 768px as the breakpoint for mobile devices
+      setIsMobile(window.innerWidth <= 1200); // Assuming 768px as the breakpoint for mobile devices
     };
 
     window.addEventListener('resize', handleResize);
@@ -99,11 +99,11 @@ const Collar = () => {
 
   return (
     <div ref={sectionRef} className="h-[95vh]">
-      <div className="flex flex-col items-start md:items-end m-5 mt-2 space-y-2 px-2 md:px-0">
-        <h1 className="text-5xl md:text-8xl text-[#3C130E] font-nohemi w-full md:w-[40%]">Smart Collar</h1>
-        <p className="ml-1 md:ml-0 md:w-[40%]">A smart collar enables you to monitor your pets&apos; location, health status, and daily activity levels for their well-being and your peace of mind.</p>
+      <div className="flex flex-col items-start md:items-center lg:items-end m-5 mt-2 space-y-2 mx-12 px-12 lg:px-0">
+        <h1 className="text-5xl md:text-8xl text-[#3C130E] font-nohemi w-full lg:w-[40%]">Smart Collar</h1>
+        <p className="ml-1 md:text-xl lg:text-sm lg:ml-0 lg:w-[40%]">A smart collar enables you to monitor your pets&apos; location, health status, and daily activity levels for their well-being and your peace of mind.</p>
       </div>
-      <section className="h-[50vh] md:h-[76vh] w-full relative">
+      <section className="h-[50vh] lg:h-[76vh] w-full relative">
         <Canvas dpr={[1, 2]} shadows={true}>
           {/* <PresentationControls
             speed={5}
@@ -163,7 +163,7 @@ const Collar = () => {
             <div className="hidden md:block w-2 h-2 border-2 border-[#DE6631] rounded-full top-[23rem] right-[33.25rem] hidden-initially absolute dot"></div>
           </>
         ) : (
-          <div className="grid grid-cols-2 gap-4 mt-2 p-2 font-semibold">
+          <div className="grid grid-cols-2 gap-4 lg:mt-2 lg:p-2 md:px-12 md:mx-12 font-semibold">
             <div>
               <ul className="list-disc pl-5">
                 <p className="text-[#3C130E] text-lg md:text-2xl font-nohemi mt-3">Geofencing</p>

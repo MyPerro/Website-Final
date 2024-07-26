@@ -129,7 +129,7 @@ body {
 /* Existing styles remain unchanged */
 
 /* Responsive adjustments */
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
   .hover-word, .hover-word2 {
     font-size: 3rem; /* Smaller font size for mobile */
     transition: none; /* Disable animations */

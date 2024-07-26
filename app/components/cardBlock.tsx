@@ -36,6 +36,12 @@ const settings = {
         slidesToShow: 1, // Show only 1 slide
       },
     },
+    {
+      breakpoint: 1024, // Width less than 768px
+      settings: {
+        slidesToShow: 2, // Show only 1 slide
+      },
+    },
     // You can add more breakpoints here if needed
   ],
 };

@@ -5,9 +5,9 @@ const Ourteam = () => {
     <div className="p-10 mx-auto">
       <h1 className="font-nohemi text-6xl mb-8 mt-12">Our Team</h1>
       <div className="flex flex-col justify-center items-center h-auto space-y-6 tracking-wide">
-        <div className="w-full md:h-auto flex flex-col md:flex-row">
-          <div className="flex flex-col md:flex-row items-center justify-center w-full md:w-1/2 bg-[#FAE9DA] mr-4 mb-4 md:mb-0 rounded-xl shadow-md">
-            <img src="/profiles/avai.png" alt="Team Member" className="w-full md:w-[18rem] h-full object-cover rounded-l-xl" />
+        <div className="w-full md:h-auto flex flex-col lg:flex-row md:space-y-6 lg:space-y-0">
+          <div className="flex flex-col md:flex-row items-center justify-center w-full lg:w-1/2 bg-[#FAE9DA] mr-4 mb-4 md:mb-0 rounded-xl shadow-md">
+            <img src="/profiles/avai.png" alt="Team Member" className="w-full md:w-[18.8rem] lg:w-[18rem] h-full object-cover rounded-l-xl" />
             <div className="flex justify-center items-start flex-col p-4">
               <p className="text-lg font-bold mb-1 font-nohemi">Saiprasad Pandilwar</p>
               <p className="text-md italic mb-1 font-nohemi">Founder</p>
@@ -21,7 +21,7 @@ const Ourteam = () => {
               </a>
             </div>
           </div>
-          <div className="flex flex-col md:flex-row items-center justify-center w-full md:w-1/2 bg-[#FAE9DA] rounded-xl shadow-md">
+          <div className="flex flex-col md:flex-row items-center justify-center w-full lg:w-1/2 bg-[#FAE9DA] rounded-xl shadow-md">
             <img src="/profiles/manan.png" alt="Team Member" className="w-full md:w-[18rem] h-full object-cover rounded-l-xl" />
             <div className="flex justify-center items-start flex-col p-4">
               <p className="text-lg font-bold mb-2 font-nohemi">Manan Vyas</p>
@@ -39,7 +39,7 @@ const Ourteam = () => {
           </div>
         </div>
         <div className="md:h-auto flex flex-row w-full">
-          <div className="flex flex-col md:flex-row justify-center items-center w-full space-y-4 md:space-x-4">
+          <div className="flex flex-col lg:flex-row justify-center items-center w-full space-y-4 lg:space-x-4">
             <div className="w-full md:w-1/3 h-auto bg-[#FAE9DA] flex flex-col items-center rounded-xl shadow-md mt-4">
               <img src="/profiles/Arunima.jpg" alt="Team Member" className="rounded-full w-40 h-40 mb-4 mt-4" />
               <p className="font-bold font-nohemi">Arunima Shrivastava</p>
