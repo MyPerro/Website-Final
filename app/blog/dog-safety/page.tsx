@@ -1,4 +1,4 @@
-import Navbar from "@/app/components/Navbar";
+import Navbar from "@/app/components/SubNavbar";
 import Footer from "@/app/components/Footer";
 import Image from "next/image";
 import { Metadata } from 'next';
