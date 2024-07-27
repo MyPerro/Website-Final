@@ -17,7 +17,7 @@ export default function Dog_Safety() {
           Dog safety : Tips for preventing accidents and injuries
         </h1>
         <h2 className="blog-author">- Arunima Mishra</h2>
-        <h2 className="blog-author pl-[15px]">Content Writer @MyPerro</h2>
+        <h2 className="blog-author-pos">Content Writer @MyPerro</h2>
         <p className="blog-para">
           If we talk about having a companion who brings immense joy, love and
           loyalty in our lives, a pet dog is a perfect example of that. Dogs
