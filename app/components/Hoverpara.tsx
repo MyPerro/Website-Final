@@ -32,7 +32,7 @@ const HoverParagraph = () => {
   };
 
   return (
-    <div className="hoverpage bg-[#3C130E] lg:bg-transparent md:border-t-2 md:border-b-2 border-[#3C130E]">
+    <div className="hoverpage bg-[#3C130E] xl:bg-transparent md:border-t-2 md:border-b-2 border-[#3C130E]">
       <div className={`hover-container ${hovered ? 'visible' : ''}`} onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)}>
         <span className={`hover-word ${isMobile ? 'hovered' : hovered ? 'hovered' : ''}`}>MISSION</span>
           <p className={`hover-paragraph ${hovered ? 'visible' : ''} md:text-2xl lg:text-lg`}>
