@@ -98,7 +98,7 @@ const Collar = () => {
   }, []);
 
   return (
-    <div ref={sectionRef} className="h-[90vh] lg:h-[105vh]" id='collar'>
+    <div ref={sectionRef} className="h-[90vh] lg:h-[105vh]" id="collar">
       <div className="flex flex-col items-start md:items-center lg:items-end m-5 mt-2 space-y-2 md:mx-12 md:px-12 lg:px-0">
         <h1 className="text-5xl lg:text-7xl xl:text-8xl text-[#3C130E] font-nohemi w-full lg:w-[40%]">Smart Collar</h1>
         <p className="ml-1 md:text-xl w-full lg:text-sm lg:ml-0 lg:w-[40%]">A smart collar enables you to monitor your pets&apos; location, health status, and daily activity levels for their well-being and your peace of mind.</p>
@@ -112,11 +112,25 @@ const Collar = () => {
             polar={[-Math.PI / 2, Math.PI / 2]} // Limits vertical rotation
             azimuth={[-Infinity, Infinity]} // Allows unlimited horizontal rotation
           > */}
-          <OrbitControls enableZoom={false} enablePan={false}/>
+          <PresentationControls
+            enabled={true} // the controls can be disabled by setting this to false
+            global={false} // Spin globally or by dragging the model
+            cursor={true} // Whether to toggle cursor style on drag
+            snap={false} // Snap-back to center (can also be a spring config)
+            speed={5} // Speed factor
+            zoom={1} // Zoom factor when half the polar-max is reached
+            rotation={[0, 0, 0]} // Default rotation
+            polar={[0, Math.PI / 2]} // Vertical limits
+            azimuth={[-Infinity, Infinity]} // Horizontal limits
+            config={{ mass: 1, tension: 170, friction: 26 }} // Spring config
+          >
+            {/* <OrbitControls enableZoom={false} enablePan={false}/> */}
             <Stage environment={'apartment'} intensity={0.01}>
               <Model scale={0.016} position={[0, -0.008, 0]} rotation={[0, Math.PI / 5, 0]} />
             </Stage>
+          </PresentationControls>
         </Canvas>
+
         {!isMobile ? (
           <>
             <p className="text-[#DE6631] hidden md:block text-lg md:text-2xl md:absolute md:top-[1rem] md:left-[19.5rem] hidden-initially param font-nohemi">Geofencing</p>
