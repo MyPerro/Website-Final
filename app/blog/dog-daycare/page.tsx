@@ -24,7 +24,7 @@ export default function dogDaycare() {
           Through Socialization
         </h1>
         <h2 className="blog-author">- Nehal Gupta</h2>
-        <h2 className="blog-author pl-[15px]">Content Writer @MyPerro</h2>
+        <h2 className="blog-author-pos">Content Writer @MyPerro</h2>
         <p className="blog-para">
           Is your furry friend feeling lonely or bored during the day? Dog
           daycare might be the perfect solution! Not only does it provide a fun
