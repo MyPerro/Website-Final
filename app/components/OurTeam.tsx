@@ -24,9 +24,9 @@ const Ourteam = () => {
           <div className="flex flex-col md:flex-row items-center justify-center w-full lg:w-1/2 bg-[#FAE9DA] rounded-xl shadow-md">
             <img src="/profiles/manan.png" alt="Team Member" className="w-full md:w-[18rem] h-full object-cover rounded-l-xl" />
             <div className="flex justify-center items-start flex-col p-4">
-              <p className="text-lg font-bold mb-2 font-nohemi">Manan Vyas</p>
-              <p className="text-md italic mb-3 font-nohemi">Co-Founder</p>
-              <p className="text-sm mb-3">
+              <p className="text-lg font-bold mb-1 font-nohemi">Manan Vyas</p>
+              <p className="text-md italic mb-1 font-nohemi">Co-Founder</p>
+              <p className="text-sm mb-5">
                 <p>
                   Growing up in a household where dogs are treated as members of the family, I absorbed the deep-seated passion my parents had for caring for dogs. What propels me forward is the recognition of a persistent problem that has plagued pet owners for years, including my own family: the
                   need for effective solutions in pet care that truly address the challenges faced by both pets and their owners. It is this realization that serves as the driving force behind MyPerro.

@@ -14,14 +14,14 @@ const Footer = () => {
           <Image src="/socials/twitter.svg" alt="twitter" width={25} height={25} />
         </div>
       </div>
-      <div className="flex flex-col space-y-1 lg:w-[20%] mt-10 mx-8 font-nohemi text-lg lg:text-lg md:text-2xl">
+      <div className="flex flex-col space-y-1 lg:w-[25%] mt-10 mx-8 font-nohemi text-lg lg:text-lg md:text-2xl ml-[7rem]">
         <h1 className='text-xl md:text-4xl lg:text-xl font-bold'>Company</h1>
         <Link href="/contactus">Contact Us</Link>
         <Link href="/contactus">About Us</Link>
         <Link href="/contactus">Terms and Conditions</Link>
         <Link href="https://docs.google.com/forms/d/10RlOOmYSfCdx1l51dLZ2wJGfCxqHsyZN4N3Ffk9X4vc/edit" target='_blank'>Internship opportunities</Link>
       </div>
-      <div className="flex flex-col space-y-1 lg:w-[20%] mt-10 mx-8 font-nohemi text-lg lg:text-lg md:text-2xl">
+      <div className="flex flex-col space-y-1 lg:w-[28%] mt-10 mx-8 font-nohemi text-lg lg:text-lg md:text-2xl ml-[2rem]">
         <h1 className='text-xl md:text-4xl lg:text-xl font-bold'>Quick Links</h1>
         <Link href="/contactus">Smart Collar</Link>
         <Link href="https://docs.google.com/forms/d/e/1FAIpQLSeUZOhsIaCAojz7eFhecgjtlCieNQFzwsQN1WFipJBFRskaIQ/viewform" target='_blank'>Become Pet Sitter</Link>
@@ -29,15 +29,15 @@ const Footer = () => {
         <Link href="/contactus">Blog</Link>
         <Link href="/contactus">Community</Link>
       </div>
-      <div className="lg:w-[65%] w-full p-8 flex flex-col lg:flex-col lg:items-center lg:mr-[6rem]">
-        <div className="lg:w-[45%] w-full">
-          <h1 className="text-3xl md:text-5xl font-nohemi text-black">Say Hello</h1>
+      <div className="lg:w-[50%] w-full p-10 px-16 flex flex-col lg:flex-col lg:items-center lg:mr-[4rem]">
+        <div className="w-full">
+          <h1 className="text-3xl md:text-4xl font-nohemi text-black mb-3">Leave A Message</h1>
         </div>
-        <div className="flex flex-col lg:w-[45%] w-full space-y-2">
+        <div className="flex flex-col w-full space-y-2">
           <input type="text" placeholder="Your E-Mail ID" className="p-2 rounded-xl shadow-3d" />
-          <input type="text" placeholder="Your Mobile Number" className="p-2 shadow-sm rounded-xl shadow-3d" />
+          <input type="text" pattern="[0-9]*" placeholder="Your Mobile Number" className="p-2 shadow-sm rounded-xl shadow-3d" />
         </div>
-        <div className='lg:w-[45%] w-full flex flex-col items-end space-y-4 mt-2 mb-20'>
+        <div className='w-full flex flex-col items-start space-y-4 mt-2 mb-20'>
           <textarea rows={3} placeholder="Your Message" className="p-2 rounded-xl shadow-3d w-full resize-none" />
           <button className='py-1 px-4 bg-[#F97247] rounded-full text-white text-xl font-nohemi'>Share</button>
         </div>
