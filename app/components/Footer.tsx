@@ -14,7 +14,7 @@ const Footer = () => {
           <a href="https://x.com/MyPerro_" target='_blank'><Image src="/socials/twitter.svg" alt="twitter" width={25} height={25} /></a>
         </div>
       </div>
-      <div className="flex flex-col space-y-1 lg:w-[25%] mt-10 mx-8 font-nohemi text-lg lg:text-lg md:text-2xl ml-[7rem]">
+      <div className="flex flex-col space-y-1 lg:w-[25%] mt-10 mx-8 font-nohemi text-lg lg:text-lg md:text-2xl lg:ml-[7rem]">
         <h1 className='text-xl md:text-4xl lg:text-xl font-bold'>Company</h1>
         <Link href="/#contact" target='_blank'>Contact Us</Link>
         <Link href="/#aboutus" target='_blank'>About Us</Link>
@@ -29,7 +29,7 @@ const Footer = () => {
         <Link href="/#blog-card">Blog</Link>
         <Link href="https://whatsapp.com/channel/0029VakNzwiFCCoMKEEG431y" target='_balnk'>Community</Link>
       </div>
-      <div className="lg:w-[50%] w-full p-10 px-16 flex flex-col lg:flex-col lg:items-center lg:mr-[4rem] lg:mb-12 xl:mb-0 mb-0">
+      <div className="lg:w-[50%] w-full p-4 lg:p-10 px-8 lg:px-16 flex flex-col lg:flex-col lg:items-center lg:mr-[4rem] lg:mb-12 xl:mb-0 mb-0">
         <div className="w-full">
           <h1 className="text-3xl md:text-4xl font-nohemi text-black mb-3">Leave A Message</h1>
         </div>

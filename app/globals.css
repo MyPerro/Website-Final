@@ -313,7 +313,7 @@ body {
 
 .card-focused, .card-blurred {
   transition: transform 0.5s ease, filter 0.5s ease, box-shadow 0.5s ease;
-  margin-bottom: 1em; /*bug fix for bottom border */
+  margin-bottom: 1rem; /*bug fix for bottom border */
 }
 
 .card-focused {
