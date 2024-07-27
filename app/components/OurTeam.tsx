@@ -2,7 +2,7 @@ import React from 'react';
 
 const Ourteam = () => {
   return (
-    <div className="p-10 mx-auto" id='services'>
+    <div className="p-10 mx-auto" id='aboutus'>
       <h1 className="font-nohemi text-6xl mb-8 mt-12">Our Team</h1>
       <div className="flex flex-col justify-center items-center h-auto space-y-6 tracking-wide">
         <div className="w-full md:h-auto flex flex-col lg:flex-row md:space-y-6 lg:space-y-0">
