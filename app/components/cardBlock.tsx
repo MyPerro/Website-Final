@@ -53,10 +53,10 @@ const settings = {
   {cardData.map((card, index) => (
   <div key={index} className={`shadow-md rounded-lg overflow-hidden bg-[#FEEAD8] blog-card ${index === activeSlide ? 'card-focused' : 'card-blurred'}`}>
     <div style={{ display: 'flex', width: '100%' }}>
-      <Image src={card.image} width={150} height={150} alt={card.title} className="w-1/2 blog-slider-main" />
+      <Image src={card.image} width={175} height={100} alt={card.title} className="w-1/2 blog-slider-main" />
       <div className="p-2 md:p-5 text-center flex flex-col justify-start space-y-6 md:space-y-0 md:justify-between w-1/2">
-        <h2 className="text-sm xl:text-lg font-bold text-gray-800 pt-2 blog-desc-main">{card.title}</h2>
-        <button className="bg-orange-500 text-white font-bold md:mb-5 md:py-1 md:px-4 pt-1 px-2 mt-1 md:mt-6 rounded hover:bg-orange-600 transition duration-300 ease-in-out text-xs xl:text-lg" ><a href={card.link} target='_blank'>Read More</a></button>
+        <h2 className="text-xs xl:text-lg font-bold text-gray-800 pt-2 blog-desc-main">{card.title}</h2>
+        <button className="bg-orange-500 text-white font-bold md:mb-5 md:py-1 md:px-4 py-1 px-2 mt-1 md:mt-6 rounded hover:bg-orange-600 transition duration-300 ease-in-out text-xs xl:text-lg" ><a href={card.link} target='_blank'>Read More</a></button>
       </div>
     </div>
   </div>

@@ -290,7 +290,7 @@ body {
 @media (max-width: 768px) {
   .blog-card {
     width: 225px !important; /* Full width on small screens */
-    height: 150px !important; /* Adjusted height for better responsiveness */
+    height: 146px !important; /* Adjusted height for better responsiveness */
     margin: 0px 5px !important; /* Minimal padding for very small screens */
   }
   .slick-slide > div {
@@ -446,8 +446,9 @@ html {
 
 @media (max-width: 768px) {
   .blog-slider-main{
-    width: 7em;
-    height: 11em;
+    /* width: 7em;
+    height: 11em; */
+    position: relative;
   }
 
   .blog-desc-main{
