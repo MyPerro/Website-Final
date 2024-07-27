@@ -112,23 +112,10 @@ const Collar = () => {
             polar={[-Math.PI / 2, Math.PI / 2]} // Limits vertical rotation
             azimuth={[-Infinity, Infinity]} // Allows unlimited horizontal rotation
           > */}
-          <PresentationControls
-            enabled={true} // the controls can be disabled by setting this to false
-            global={true} // Spin globally or by dragging the model
-            cursor={true} // Whether to toggle cursor style on drag
-            snap={false} // Snap-back to center (can also be a spring config)
-            speed={5} // Speed factor
-            zoom={1} // Zoom factor when half the polar-max is reached
-            rotation={[0, 0, 0]} // Default rotation
-            polar={[0, Math.PI / 2]} // Vertical limits
-            azimuth={[-Infinity, Infinity]} // Horizontal limits
-            config={{ mass: 1, tension: 170, friction: 26 }} // Spring config
-          >
-            {/* <OrbitControls enableZoom={false} enablePan={false}/> */}
+            <OrbitControls enableZoom={false} enablePan={false}/>
             <Stage environment={'apartment'} intensity={0.01}>
               <Model scale={0.016} position={[0, -0.008, 0]} rotation={[0, Math.PI / 5, 0]} />
             </Stage>
-          </PresentationControls>
         </Canvas>
 
         {!isMobile ? (
