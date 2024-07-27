@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <div className="bg-custom flex flex-col lg:flex-row lg:h-[60vh]" id='contact'>
       <div className="flex flex-col justify-start items-start lg:w-[25%] w-full p-4">
-        <a href="/" target='_blank'><Image className="pt-4 mx-auto" src="/footerlogo.png" alt="logo" width={250} height={250} /></a>
+        <a href="/" target='_blank' className='mx-auto'><Image className="pt-4 mx-auto" src="/footerlogo.png" alt="logo" width={250} height={250} /></a>
         <div className="flex flex-row justify-center items-center space-x-4 mx-auto mt-4">
           <a href="https://www.linkedin.com/company/myperroindia?trk=profile-position" target='_blank'><Image src="/socials/linkedin.svg" alt="linkedin" width={25} height={25} /></a>
           {/* <a href=""><Image src="/socials/facebook.svg" alt="facebook" width={25} height={25} /></a> */}

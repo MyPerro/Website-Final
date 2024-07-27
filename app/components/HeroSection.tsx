@@ -41,7 +41,7 @@ export default function HeroSection() {
         style={{
           backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/hero-final.png')",
         }}>
-        <motion.img src="/Group.png" alt="MyPerro logo" className="md:pl-20 pb-20 md:pb-2 p-5" style={{ width: fontSize }} />
+        <motion.img src="/Group.png" alt="MyPerro logo" className="md:pl-20 pb-20 mb-4 md:pb-2 p-5" style={{ width: fontSize }} />
       </div>
     </>
   );
