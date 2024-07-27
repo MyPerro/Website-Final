@@ -401,6 +401,11 @@ body {
   font-weight: bold;
 }
 
+.pre-fade{
+  opacity: 0;
+  transition: opacity 1s;
+}
+
 .blog-ol{
   list-style-type: decimal;
   font-size: 20px;
