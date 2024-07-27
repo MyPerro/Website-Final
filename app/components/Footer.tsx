@@ -16,8 +16,8 @@ const Footer = () => {
       </div>
       <div className="flex flex-col space-y-1 lg:w-[25%] mt-10 mx-8 font-nohemi text-lg lg:text-lg md:text-2xl ml-[7rem]">
         <h1 className='text-xl md:text-4xl lg:text-xl font-bold'>Company</h1>
-        <Link href="/#contact" target='_blank'>Contact Us</Link>
-        <Link href="/#aboutus" target='_blank'>About Us</Link>
+        <Link href="/#contact" >Contact Us</Link>
+        <Link href="/#aboutus" >About Us</Link>
         {/* <Link href="/contactus">Terms and Conditions</Link> */}
         <Link href="https://docs.google.com/forms/d/10RlOOmYSfCdx1l51dLZ2wJGfCxqHsyZN4N3Ffk9X4vc/edit" target='_blank'>Internship opportunities</Link>
       </div>
