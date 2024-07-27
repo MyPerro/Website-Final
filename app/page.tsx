@@ -2,7 +2,6 @@
 import Image from 'next/image';
 import Services from './components/Services';
 import HeroSection from './components/HeroSection';
-import SmartCollar from './components/SmartCollar';
 import Ourteam from './components/OurTeam';
 import HoverParagraph from './components/Hoverpara';
 import Cardblock from './components/cardBlock';
@@ -10,6 +9,10 @@ import Footer from './components/Footer';
 import Loader from './components/Preloader';
 import { useState , useEffect} from 'react';
 import Metadata from './components/MetaData';
+import dynamic from 'next/dynamic';
+
+const SmartCollar = dynamic(() => import('./components/SmartCollar'), { ssr: false });
+
 
 
 // export const metadata: Metadata = {
