@@ -2,6 +2,8 @@
 import { Canvas, useFrame } from 'react-three-fiber';
 import { useGLTF, Stage, PresentationControls, OrbitControls } from '@react-three/drei';
 import { useState, useEffect, useRef } from 'react';
+import * as THREE from 'three'; // Import the 'THREE' module
+import '@google/model-viewer/dist/model-viewer.min.js';
 
 const Model = (props: JSX.IntrinsicElements['group']) => {
   const scene = useGLTF('dogCollar.glb').scene;
@@ -104,20 +106,20 @@ const Collar = () => {
         <p className="ml-1 md:text-xl w-full lg:text-sm lg:ml-0 lg:w-[40%]">A smart collar enables you to monitor your pets&apos; location, health status, and daily activity levels for their well-being and your peace of mind.</p>
       </div>
       <section className="h-[40vh] lg:h-[65vh] xl:h-[76vh] w-full relative">
-        <Canvas dpr={[1, 2]} shadows={true}>
-          {/* <PresentationControls
+        {/* <Canvas dpr={[1, 2]} shadows={true}>
+          <PresentationControls
             speed={5}
             global
             config={{ mass: 1, tension: 170, friction: 26 }}
             polar={[-Math.PI / 2, Math.PI / 2]} // Limits vertical rotation
             azimuth={[-Infinity, Infinity]} // Allows unlimited horizontal rotation
-          > */}
+          > 
             <OrbitControls enableZoom={false} enablePan={false}/>
             <Stage environment={'apartment'} intensity={0.01}>
               <Model scale={0.016} position={[0, -0.008, 0]} rotation={[0, Math.PI / 5, 0]} />
             </Stage>
-        </Canvas>
-
+        </Canvas> */}
+        <model-viewer src="dogCollar.glb" alt="A 3D model of a dog collar" loading="eager" camera-controls camera-orbit="-45deg 90deg 45deg"></model-viewer>
         {!isMobile ? (
           <>
             <p className="text-[#DE6631] hidden md:block text-lg md:text-2xl md:absolute md:top-[1rem] md:left-[19.5rem] hidden-initially param font-nohemi">Geofencing</p>
