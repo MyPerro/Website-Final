@@ -48,7 +48,7 @@ const settings = {
 
   return (
 <>
-<h1 className='font-nohemi text-6xl  mt-12 ml-10'>Blogs </h1>
+<h1 className='font-nohemi text-6xl  mt-12 ml-10' id='blog-card'>Blogs </h1>
 <Slider className="p-[3rem] mb-10" {...settings}>
   {cardData.map((card, index) => (
   <div key={index} className={`shadow-md rounded-lg overflow-hidden bg-[#FEEAD8] blog-card ${index === activeSlide ? 'card-focused' : 'card-blurred'}`}>
