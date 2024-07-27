@@ -1,5 +1,5 @@
 import Footer from "@/app/components/Footer";
-import Navbar from "@/app/components/Navbar";
+import Navbar from "@/app/components/SubNavbar";
 import Image from "next/image";
 import { Metadata } from 'next';
 
@@ -181,7 +181,9 @@ export default function DogVet() {
           life. So, make that appointment today and invest in your pet&apos;s future
           well-being!
         </p>
+        <p className="blog-safety">Note: The above images are for only illustrations purpose</p>
       </div>
+      <Footer/>
     </>
   );
 }

@@ -1,4 +1,4 @@
-import Navbar from "@/app/components/Navbar";
+import Navbar from "@/app/components/SubNavbar";
 import Footer from "@/app/components/Footer";
 import Image from "next/image";
 import { Metadata } from 'next';
@@ -101,7 +101,7 @@ export default function Dog_Safety() {
             alt="Nutrition table for the dog"
             width={10000}
             height={10000}
-            className="blog-img"
+            className="my-[20px] self-center w-[60vw]"
           />
           <p className="blog-img-desc">
             <a href="https://www.barclondon.com/" className="text-blue-700  italic" target="_blank">

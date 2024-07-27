@@ -44,13 +44,13 @@ const Navbar = () => {
       </div>
       {/* Adjusted: Hide original navbar links on mobile when menu is open */}
       <div className={`hidden lg:flex justify-center items-center space-x-12 font-semibold mr-[2rem] ${isMenuOpen ? 'hidden' : 'flex'}`}>
-        <Link href="#hero" className="text-zinc-800">
+        <Link href="\#hero" className="text-zinc-800">
           HOME
         </Link>
-        <Link href="#services" className="text-zinc-800">
+        <Link href="\#services" className="text-zinc-800">
           ABOUT US
         </Link>
-        <Link href="#contact" className="text-zinc-800">
+        <Link href="\#contact" className="text-zinc-800">
           CONTACT US
         </Link>
         <button className="bg-orange-500 text-white px-6 py-2 rounded-lg"><a href="https://whatsapp.com/channel/0029VakNzwiFCCoMKEEG431y" target='_blank'>Join Community</a></button>
@@ -58,9 +58,9 @@ const Navbar = () => {
       {isMenuOpen && (
         <div className="absolute top-0 right-0 mt-[8vh] mr-2 p-3 bg-white rounded-lg shadow-lg lg:hidden">
           <div className="flex flex-col justify-between items-start space-y-2 text-sm">
-            <Link href="#hero">HOME</Link>
-            <Link href="#services">ABOUT US</Link>
-            <Link href="#contact">CONTACT US</Link>
+            <Link href="\#hero">HOME</Link>
+            <Link href="\#services">ABOUT US</Link>
+            <Link href="\#contact">CONTACT US</Link>
             <button className="bg-orange-500 text-white px-4 py-1 rounded-lg"><a href="https://whatsapp.com/channel/0029VakNzwiFCCoMKEEG431y" target='_blank'>Join Community</a></button>
           </div>
         </div>
