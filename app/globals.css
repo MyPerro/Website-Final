@@ -507,6 +507,19 @@ html {
   }
 }
 
+.preloader-css{ 
+  background: white;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  top: 0%;
+  left: 0%;
+  z-index: 999;
+}
+
 model-viewer {
   margin: 0 auto;
   width: 60%;
