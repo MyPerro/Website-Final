@@ -1,14 +1,6 @@
 'use client';
-import { Canvas, useFrame } from 'react-three-fiber';
-import { useGLTF, Stage, PresentationControls, OrbitControls } from '@react-three/drei';
 import { useState, useEffect, useRef } from 'react';
-import * as THREE from 'three'; // Import the 'THREE' module
 import '@google/model-viewer/dist/model-viewer.min.js';
-
-const Model = (props: JSX.IntrinsicElements['group']) => {
-  const scene = useGLTF('dogCollar.glb').scene;
-  return <primitive object={scene} {...props} />;
-};
 
 const Collar = () => {
   const pathRef1 = useRef<SVGPathElement>(null);
@@ -100,7 +92,7 @@ const Collar = () => {
   }, []);
 
   return (
-    <div ref={sectionRef} className="h-[90vh] lg:h-[105vh]" id="collar">
+    <div ref={sectionRef} className="h-[90vh] lg:h-[105vh] xl:h-[85vh]" id="collar">
       <div className="flex flex-col items-start md:items-center lg:items-end m-5 mt-2 space-y-2 md:mx-12 md:px-12 lg:px-0">
         <h1 className="text-5xl lg:text-7xl xl:text-8xl text-[#3C130E] font-nohemi w-full lg:w-[40%]">Smart Collar</h1>
         <p className="ml-1 md:text-xl w-full lg:text-sm lg:ml-0 lg:w-[40%]">A smart collar enables you to monitor your pets&apos; location, health status, and daily activity levels for their well-being and your peace of mind.</p>
@@ -119,7 +111,7 @@ const Collar = () => {
               <Model scale={0.016} position={[0, -0.008, 0]} rotation={[0, Math.PI / 5, 0]} />
             </Stage>
         </Canvas> */}
-        <model-viewer src="dogCollar.glb" alt="A 3D model of a dog collar" loading="eager" camera-controls camera-orbit="-45deg 90deg 45deg"></model-viewer>
+        <model-viewer src="dogCollar.glb" alt="A 3D model of a dog collar" loading="eager" camera-controls camera-orbit="-45deg 90deg 45deg" disable-zoom disable-pan shadow-intensity="1"></model-viewer>
         {!isMobile ? (
           <>
             <p className="text-[#DE6631] hidden md:block text-lg md:text-2xl md:absolute md:top-[1rem] md:left-[19.5rem] hidden-initially param font-nohemi">Geofencing</p>

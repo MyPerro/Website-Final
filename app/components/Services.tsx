@@ -8,13 +8,13 @@ const Services = () => {
   const [isLoaded, setLoaded] = useState(false);
 
   return (
-    <div className="flex flex-col md:flex-col lg:flex-row justify-center items-center px-2 md:px-[3rem] m-5 md:m-10 mb-9 min-h-[90vh]" id="our-services">
-      <div className="w-full lg:w-[35%] flex flex-col justify-center items-start space-y-4">
+    <div className="flex flex-col md:flex-col xl:flex-row justify-center items-center px-2 md:px-[3rem] m-5 md:m-10 mb-9 min-h-[90vh]" id="our-services">
+      <div className="w-full xl:w-[35%] flex flex-col justify-center items-start space-y-4">
         <h1 className="text-5xl w-[50%] md:text-8xl text-[#3C130E] font-nohemi">Our Services</h1>
         <p className="text-md md:text-2xl lg:text-xl p-2 font-neue">Our certified, dog walkers and dog boarders are dedicated to providing a safe and enjoyable experience for your pets, whether they&apos;re staying with us or enjoying their daily walks.</p>
         <button className="bg-[#FC6638] rounded-[2rem] py-2 px-4 md:px-7 text-lg md:text-xl text-white font-semibold">Coming Soon</button>
       </div>
-      <div className="w-full lg:w-[65%] flex flex-row md:flex-row justify-center items-center lg:pl-20 mt-10 lg:mt-0">
+      <div className="w-full xl:w-[65%] flex flex-row md:flex-row justify-center items-center lg:pl-20 mt-10 lg:mt-0">
         <div className="w-full md:w-1/2 flex flex-col justify-center items-center md:items-start m-2 md:m-10 space-y-4">
           <div className="bg-[#fbead8] h-[12rem] w-[10rem] md:h-[25rem] md:w-[22rem] p-2 md:p-8 flex justify-center items-center rounded-tl-[3rem] rounded-br-[3rem] md:rounded-tl-[5rem] md:rounded-br-[5rem] shadow-xl">
             {/* <video width="300" height="300" autoPlay loop muted>
