@@ -14,14 +14,15 @@ const Collar = () => {
 
   // Module-level variable to track if the animation has already played
   let hasAnimated = false;
+  const [isAnimated, setAnimated] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting && !hasAnimated) {
+          if (entry.isIntersecting && !isAnimated) {
             // Check if hasAnimated is false
-            hasAnimated = true; // Set hasAnimated to true to prevent future animations
+            setAnimated(true); // Set hasAnimated to true to prevent future animations
             [pathRef1, pathRef2, pathRef3, pathRef4, pathRef5, pathRef6].forEach((ref) => {
               if (ref.current) {
                 const path = ref.current;
@@ -78,11 +79,14 @@ const Collar = () => {
         observer.unobserve(sectionRef.current);
       }
     };
-  }, []);
+  }, [isAnimated]);
 
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 1200); // Assuming 768px as the breakpoint for mobile devices
+      if (window.innerWidth>1200){
+        setAnimated(false);
+      }
     };
 
     window.addEventListener('resize', handleResize);
