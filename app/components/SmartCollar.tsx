@@ -94,8 +94,8 @@ const Collar = () => {
   return (
     <div ref={sectionRef} className="h-[90vh] lg:h-[105vh] xl:h-[85vh]" id="collar">
       <div className="flex flex-col items-start md:items-center lg:items-end m-5 mt-2 space-y-2 md:mx-12 md:px-12 lg:px-0">
-        <h1 className="text-5xl lg:text-7xl xl:text-8xl text-[#3C130E] font-nohemi w-full lg:w-[40%]">Smart Collar</h1>
-        <p className="ml-1 md:text-xl w-full lg:text-sm lg:ml-0 lg:w-[40%]">A smart collar enables you to monitor your pets&apos; location, health status, and daily activity levels for their well-being and your peace of mind.</p>
+        <h1 className="text-5xl lg:text-7xl xl:text-8xl text-[#3C130E] font-nohemi w-full lg:w-[45%]">Smart Collar</h1>
+        <p className="ml-1 md:text-xl w-full lg:text-sm lg:ml-0 lg:w-[44.5%]">A smart collar enables you to monitor your pets&apos; location, health status, and daily activity levels for their well-being and your peace of mind.</p>
       </div>
       <section className="h-[40vh] lg:h-[65vh] xl:h-[76vh] w-full relative">
         {/* <Canvas dpr={[1, 2]} shadows={true}>
@@ -135,21 +135,21 @@ const Collar = () => {
               </svg>
             </div>
             <div className="hidden md:block w-2 h-2 border-2 border-[#DE6631] rounded-full top-[22.8rem] left-[28.5rem] absolute hidden-initially dot"></div>
-            <p className="text-[#DE6631] hidden md:block text-lg md:text-2xl md:absolute md:top-[1.50rem] md:right-[8.25rem] w-[15%] hidden-initially leading-tight param-right font-nohemi">Respiratory Rate Monitoring</p>
+            <p className="text-[#DE6631] hidden md:block text-lg md:text-2xl md:absolute md:top-[1.50rem] md:right-[7.50rem] w-[15%] hidden-initially leading-tight param-right font-nohemi">Respiratory Rate Monitoring</p>
             <div className="hidden md:block absolute top-[2rem] right-[23rem]">
               <svg width="135" height="82" viewBox="0 0 246 85" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path ref={pathRef4} d="M246 2H65.5L1.5 84" stroke="black" stroke-width="3" />
               </svg>
             </div>
             <div className="hidden md:block w-2 h-2 border-2 border-[#DE6631] rounded-full top-[5.85rem] right-[31.25rem] hidden-initially absolute dot"></div>
-            <p className="text-[#DE6631] hidden md:block text-lg md:text-2xl md:absolute md:top-[13.75rem] md:right-[14.5rem] w-[10%] hidden-initially leading-tight param-right font-nohemi">Activity Monitoring</p>
+            <p className="text-[#DE6631] hidden md:block text-lg md:text-2xl md:absolute md:top-[13.5rem] md:right-[13.75rem] w-[10%] hidden-initially leading-tight param-right font-nohemi">Activity Monitoring</p>
             <div className="hidden md:block absolute top-[15rem] right-[23rem]">
               <svg width="155" height="2" viewBox="0 0 112 2" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path ref={pathRef5} d="M0 1h112" stroke="#DE6631" strokeWidth="2" />
               </svg>
             </div>
             <div className="hidden md:block w-2 h-2 border-2 border-[#3C130E] rounded-full top-[14.85rem] right-[31.25rem] hidden-initially absolute dot"></div>
-            <p className="text-[#DE6631] hidden md:block text-lg md:text-2xl md:absolute md:top-[24.5rem] md:right-[14.75rem] w-[10%] hidden-initially leading-tight param-right font-nohemi">Temperature Monitoring</p>
+            <p className="text-[#DE6631] hidden md:block text-lg md:text-2xl md:absolute md:top-[24.5rem] md:right-[14rem] w-[10%] hidden-initially leading-tight param-right font-nohemi">Temperature Monitoring</p>
             <div className="hidden md:block absolute top-[22.25rem] right-[25rem]">
               <svg width="135" height="82" viewBox="0 0 246 85" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path ref={pathRef6} d="M246 83.5H65.5L1.5 1.5" stroke="black" stroke-width="3" />
