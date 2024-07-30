@@ -45,7 +45,7 @@ const Footer = () => {
           Community
         </Link>
       </div>
-      <div className="lg:w-[50%] w-full p-4 lg:p-10 px-8 lg:px-16 flex flex-col lg:flex-col lg:items-center lg:mr-[4rem] lg:mb-12 xl:mb-0 mb-10">
+      <div className="lg:w-[50%] w-full p-4 lg:p-10 px-8 lg:px-16 flex flex-col lg:flex-col lg:items-center lg:mr-[4rem] lg:mb-12 xl:mb-10 mb-10">
         <div className="w-full">
           <h1 className="text-3xl md:text-4xl font-nohemi text-black mb-3">Leave A Message</h1>
         </div>
