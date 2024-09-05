@@ -47,7 +47,7 @@ body {
 }
 
 .hover-word.hovered {
-  transform: translateX(-32vw);
+  transform: translateX(-130%);
   color: white;
 }
 
@@ -59,7 +59,7 @@ body {
   opacity: 0;
   visibility: hidden;
   transition: none;
-  width: 60vw; /* Adjust width as needed */
+  width: 55vw; /* Adjust width as needed */
   text-align: left;
   padding: 1vh;
   font-size: 1.3vw;
@@ -95,7 +95,7 @@ body {
 }
 
 .hover-word2.hovered2 {
-  transform: translateX(-32vw);
+  transform: translateX(-200%);
   color: white;
 }
 
@@ -106,7 +106,7 @@ body {
   transform: translateX(-20%) translateY(-30%);
   opacity: 0;
   visibility: hidden;
-  width: 60vw; /* Adjust width as needed */
+  width: 55vw; /* Adjust width as needed */
   text-align: left;
   padding: 1vh;
   font-size: 1.3vw;

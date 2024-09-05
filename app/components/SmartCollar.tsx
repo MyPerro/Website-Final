@@ -99,7 +99,7 @@ const Collar = () => {
     <div ref={sectionRef} className="h-[90vh] lg:h-[105vh] xl:h-[85vh]" id="collar">
       <div className="flex flex-col items-start md:items-center lg:items-end m-5 mt-2 space-y-2 md:mx-12 md:px-12 lg:px-0">
         <h1 className="text-5xl lg:text-7xl xl:text-8xl text-[#3C130E] font-nohemi w-full lg:w-[40%]">Smart Collar</h1>
-        <p className="ml-1 md:text-xl w-full lg:text-sm lg:ml-0 lg:w-[40%]">A smart collar enables you to monitor your pets&apos; location, health status, and daily activity levels for their well-being and your peace of mind.</p>
+        <p className="ml-1 md:text-xl w-full lg:text-md lg:ml-0 lg:w-[40%] font-neue">A smart collar enables you to monitor your pets&apos; location, health status, and daily activity levels for their well-being and your peace of mind.</p>
       </div>
       <section className="h-[40vh] lg:h-[65vh] xl:h-[76vh] w-full relative">
         {/* <Canvas dpr={[1, 2]} shadows={true}>
