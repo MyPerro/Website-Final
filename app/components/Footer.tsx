@@ -9,7 +9,7 @@ const Footer = () => {
         <a href="/" target="_blank" className="mx-auto">
           <Image className="pt-4 mx-auto" src="/footerlogo.png" alt="logo" width={250} height={250} />
         </a>
-        <div className="flex flex-row justify-center items-center space-x-4 mx-auto mt-4">
+        <div className="flex flex-row justify-center items-center space-x-4 self-center mt-4">
           <a href="https://www.linkedin.com/company/myperroindia?trk=profile-position" target="_blank">
             <Image src="/socials/linkedin.svg" alt="linkedin" width={25} height={25} />
           </a>
@@ -50,13 +50,13 @@ const Footer = () => {
           <h1 className="text-3xl md:text-4xl font-nohemi text-black mb-3">Leave A Message</h1>
         </div>
         <form action="https://formspree.io/f/mkgwjqol" method="POST" className="flex flex-col w-full space-y-2">
-          <input type="email" name="email" placeholder="Your E-Mail ID" className="p-2 rounded-xl shadow-3d" />
+          <input type="email" name="email" placeholder="Your E-Mail ID" className="p-2 rounded-xl shadow-3d placeholder:-translate-x-4" />
           <input
             type="tel"
             name="phone"
             pattern="^\+?[0-9]{10,12}$"
             placeholder="Your Mobile Number"
-            className="p-2 shadow-sm rounded-xl shadow-3d"
+            className="p-2 shadow-sm rounded-xl shadow-3d placeholder:-translate-x-4"
             maxLength={12}
             onInput={(e) => {
               const target = e.target as HTMLInputElement;
@@ -64,7 +64,7 @@ const Footer = () => {
             }}
           />
           <div className="w-full flex flex-col items-start space-y-4 mt-2 mb-20">
-            <textarea name="message" rows={3} placeholder="Your Message" className="p-2 rounded-xl shadow-3d w-full resize-none" />
+            <textarea name="message" rows={3} placeholder="Your Message" className="p-2 rounded-xl shadow-3d w-full resize-none placeholder:-translate-x-4" />
             <button type="submit" className="py-1 px-4 bg-[#F97247] rounded-full text-white text-xl font-nohemi">
               Share
             </button>
