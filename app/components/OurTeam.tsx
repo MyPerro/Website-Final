@@ -27,8 +27,10 @@ const Ourteam = () => {
               <p className="text-lg font-bold mb-1 font-nohemi">Manan Vyas</p>
               <p className="text-md italic mb-1 font-nohemi">Co-Founder</p>
               <p className="text-sm mb-5">
-                Growing up in a household where dogs are treated as members of the family, I absorbed the deep-seated passion my parents had for caring for dogs. What propels me forward is the recognition of a persistent problem that has plagued pet owners for years, including my own family: the
-                need for effective solutions in pet care that truly address the challenges faced by both pets and their owners. It is this realization that serves as the driving force behind MyPerro.
+                <p>
+                  Growing up in a household where dogs are treated as members of the family, I absorbed the deep-seated passion my parents had for caring for dogs. What propels me forward is the recognition of a persistent problem that has plagued pet owners for years, including my own family: the
+                  need for effective solutions in pet care that truly address the challenges faced by both pets and their owners. It is this realization that serves as the driving force behind MyPerro.
+                </p>{' '}
               </p>
               <a href="https://www.linkedin.com/in/manan-vyas-b13667252/" target="_blank" rel="noopener noreferrer">
                 <img src="/socials/linkedin.svg" alt="LinkedIn" className="w-5 h-5" />
@@ -80,7 +82,7 @@ const Ourteam = () => {
             </div>
             <div className="w-full md:w-1/3 h-auto bg-[#FAE9DA] flex flex-col items-center rounded-xl shadow-md">
               <img src="/profiles/Shreya.jpg" alt="Team Member" className="rounded-full w-40 h-40 mb-4 mt-4" />
-              <p className="font-bold font-nohemi">Shreya Bakre</p>
+              <p className="font-bold font-nohemi">Shreya Bakre</p>
               <p className="italic font-nohemi">UI/UX Designer</p>
               <a href="https://www.linkedin.com/in/shreya-bakre/" target="_blank" rel="noopener noreferrer">
                 <img src="/socials/linkedin.svg" alt="LinkedIn" className="w-6 h-6 mt-4 mb-4" />
